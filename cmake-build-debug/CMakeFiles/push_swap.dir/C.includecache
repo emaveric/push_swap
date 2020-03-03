@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/emaveric/push_swap/includes/push_swap.h
+stdio.h
+-
+stdarg.h
+-
+../libft/libft.h
+/Users/emaveric/push_swap/libft/libft.h
+
+/Users/emaveric/push_swap/libft/libft.h
+stdlib.h
+-
+unistd.h
+-
+string.h
+-
+limits.h
+-
+fcntl.h
+-
+
+/Users/emaveric/push_swap/src/checker.c
+../includes/push_swap.h
+/Users/emaveric/push_swap/includes/push_swap.h
+
