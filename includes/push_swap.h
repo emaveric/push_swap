@@ -34,4 +34,6 @@ typedef struct			s_ps
 	struct s_num		*tail_b;
 }						t_ps;
 
+void	instr_execution(t_ps *ps, t_num *a, t_num *b, char *line);
+
 #endif

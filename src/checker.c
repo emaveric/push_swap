@@ -6,7 +6,7 @@
 /*   By: emaveric <emaveric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 16:38:32 by emaveric          #+#    #+#             */
-/*   Updated: 2020/03/03 21:47:05 by emaveric         ###   ########.fr       */
+/*   Updated: 2020/03/05 21:41:12 by emaveric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,50 @@ t_ps	*init_ps(void)
 	return (new);
 }
 
-int 	check_valid(void)
+int 	check_valid_instr(char *line)
 {
+	if (ft_strnequ(line, "sa", 3))
+		return (1);
+	else if (ft_strnequ(line, "sb", 3))
+		return (1);
+	else if (ft_strnequ(line, "sb", 3))
+		return (1);
+	else if (ft_strnequ(line, "ss", 3))
+		return (1);
+	else if (ft_strnequ(line, "pa", 3))
+		return (1);
+	else if (ft_strnequ(line, "pb", 3))
+		return (1);
+	else if (ft_strnequ(line, "ra", 3))
+		return (1);
+	else if (ft_strnequ(line, "rb", 3))
+		return (1);
+	else if (ft_strnequ(line, "rr", 3))
+		return (1);
+	else if (ft_strnequ(line, "rra", 4))
+		return (1);
+	else if (ft_strnequ(line, "rrb", 4))
+		return (1);
+	else if (ft_strnequ(line, "rrr", 4))
+		return (1);
+	return (0);
+}
+
+int		read_instr(t_ps *ps, t_num *a, t_num *b)
+{
+	char	*line;
+
+	while (get_next_line(0, &line))
+	{
+		if (!(check_valid_instr(line)))
+		{
+			printf("Error\n");
+			free(line);
+			return (-1);
+		}
+		instr_execution(ps, a, b, line);
+		free(line);
+	}
 	return (0);
 }
 
@@ -53,7 +95,7 @@ void	check_ind(t_ps *ps, t_num *a)
 	min = a->data;
 	flag = a;
 	m_ind = 0;
-	while (a->next != NULL)
+	while (a)
 	{
 		if (min > a->data && a->ind == -1)
 		{
@@ -61,14 +103,13 @@ void	check_ind(t_ps *ps, t_num *a)
 			flag = a;
 		}
 		a = a->next;
-		if (a->next == NULL && flag != NULL)
+		if (a == NULL && flag != NULL)
 		{
 			flag->ind = m_ind;
 			m_ind++;
 			flag = NULL;
 			a = ps->head_a;
 			min = 2147483647;
-
 		}
 	}
 }
@@ -93,14 +134,16 @@ void	check_num(t_ps *ps, t_num *a, char **av)
 				if (ps->head_a == NULL)
 					ps->head_a = a;
 				a->ind = -1;
-				a->next = init_num();
-				a = a->next;
-				tmp->next = a;
-				a->prev = tmp;
-				tmp = a;
+				if (*(av + 1))
+				{
+					a->next = init_num();
+					a = a->next;
+					tmp->next = a;
+					a->prev = tmp;
+					tmp = a;
+				}
 				*av += 1;
 			}
-			//printf("%c\n", **av);
 			while (**av == ' ' && **av)
 				*av += 1;
 		}
@@ -126,9 +169,16 @@ int 	main(int ac, char **av)
 			return (-1);
 		check_num(ps, a, av);
 		check_ind(ps, a);
+		a = ps->head_a;
+		while (a != NULL)
+		{
+			printf("data %d ind %d\n", a->data, a->ind);
+			a = a->next;
+		}
+		read_instr(ps, a, b);
 	}
 	a = ps->head_a;
-	while (a->next != NULL)
+	while (a != NULL)
 	{
 		printf("data %d ind %d\n", a->data, a->ind);
 		a = a->next;

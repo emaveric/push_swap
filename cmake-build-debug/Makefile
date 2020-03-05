@@ -2337,6 +2337,33 @@ libft/ft_ulltoa.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/ft_ulltoa.c.s
 .PHONY : libft/ft_ulltoa.c.s
 
+libft/get_next_line.o: libft/get_next_line.c.o
+
+.PHONY : libft/get_next_line.o
+
+# target to build an object file
+libft/get_next_line.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/get_next_line.c.o
+.PHONY : libft/get_next_line.c.o
+
+libft/get_next_line.i: libft/get_next_line.c.i
+
+.PHONY : libft/get_next_line.i
+
+# target to preprocess a source file
+libft/get_next_line.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/get_next_line.c.i
+.PHONY : libft/get_next_line.c.i
+
+libft/get_next_line.s: libft/get_next_line.c.s
+
+.PHONY : libft/get_next_line.s
+
+# target to generate assembly for a file
+libft/get_next_line.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/get_next_line.c.s
+.PHONY : libft/get_next_line.c.s
+
 libft/itoa_base.o: libft/itoa_base.c.o
 
 .PHONY : libft/itoa_base.o
@@ -2471,6 +2498,33 @@ libft/ulltoa_base.s: libft/ulltoa_base.c.s
 libft/ulltoa_base.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/ulltoa_base.c.s
 .PHONY : libft/ulltoa_base.c.s
+
+src/check_instr.o: src/check_instr.c.o
+
+.PHONY : src/check_instr.o
+
+# target to build an object file
+src/check_instr.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_instr.c.o
+.PHONY : src/check_instr.c.o
+
+src/check_instr.i: src/check_instr.c.i
+
+.PHONY : src/check_instr.i
+
+# target to preprocess a source file
+src/check_instr.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_instr.c.i
+.PHONY : src/check_instr.c.i
+
+src/check_instr.s: src/check_instr.c.s
+
+.PHONY : src/check_instr.s
+
+# target to generate assembly for a file
+src/check_instr.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_instr.c.s
+.PHONY : src/check_instr.c.s
 
 src/checker.o: src/checker.c.o
 
@@ -2754,6 +2808,9 @@ help:
 	@echo "... libft/ft_ulltoa.o"
 	@echo "... libft/ft_ulltoa.i"
 	@echo "... libft/ft_ulltoa.s"
+	@echo "... libft/get_next_line.o"
+	@echo "... libft/get_next_line.i"
+	@echo "... libft/get_next_line.s"
 	@echo "... libft/itoa_base.o"
 	@echo "... libft/itoa_base.i"
 	@echo "... libft/itoa_base.s"
@@ -2769,6 +2826,9 @@ help:
 	@echo "... libft/ulltoa_base.o"
 	@echo "... libft/ulltoa_base.i"
 	@echo "... libft/ulltoa_base.s"
+	@echo "... src/check_instr.o"
+	@echo "... src/check_instr.i"
+	@echo "... src/check_instr.s"
 	@echo "... src/checker.o"
 	@echo "... src/checker.i"
 	@echo "... src/checker.s"

@@ -86,11 +86,13 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/emaveric/push_swap/libft/ft_tolower.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/ft_tolower.c.o"
   "/Users/emaveric/push_swap/libft/ft_toupper.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/ft_toupper.c.o"
   "/Users/emaveric/push_swap/libft/ft_ulltoa.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/ft_ulltoa.c.o"
+  "/Users/emaveric/push_swap/libft/get_next_line.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/get_next_line.c.o"
   "/Users/emaveric/push_swap/libft/itoa_base.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/itoa_base.c.o"
   "/Users/emaveric/push_swap/libft/number_len_ll.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/number_len_ll.c.o"
   "/Users/emaveric/push_swap/libft/number_len_ull.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/number_len_ull.c.o"
   "/Users/emaveric/push_swap/libft/to_uppercase.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/to_uppercase.c.o"
   "/Users/emaveric/push_swap/libft/ulltoa_base.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/ulltoa_base.c.o"
+  "/Users/emaveric/push_swap/src/check_instr.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/check_instr.c.o"
   "/Users/emaveric/push_swap/src/checker.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/checker.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

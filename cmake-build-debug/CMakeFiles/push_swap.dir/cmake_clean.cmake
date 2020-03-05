@@ -86,7 +86,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/push_swap.dir/libft/number_len_ull.c.o"
   "CMakeFiles/push_swap.dir/libft/to_uppercase.c.o"
   "CMakeFiles/push_swap.dir/libft/ulltoa_base.c.o"
+  "CMakeFiles/push_swap.dir/libft/get_next_line.c.o"
   "CMakeFiles/push_swap.dir/src/checker.c.o"
+  "CMakeFiles/push_swap.dir/src/check_instr.c.o"
   "push_swap.pdb"
   "push_swap"
 )

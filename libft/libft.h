@@ -6,12 +6,13 @@
 /*   By: emaveric <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 22:50:49 by emaveric          #+#    #+#             */
-/*   Updated: 2020/03/02 16:08:44 by emaveric         ###   ########.fr       */
+/*   Updated: 2020/03/05 18:41:19 by emaveric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+#define BUFF_SIZE 10
 
 # include <stdlib.h>
 # include <unistd.h>
@@ -115,5 +116,6 @@ char				*ft_strjoin_free(char *s1, char *s2, int opt);
 char				*ft_strncut(char *s, int start, int end);
 char				*itoa_base(int value, int base);
 void				ft_free(char **res, size_t i);
+int					get_next_line(const int fd, char **line);
 
 #endif

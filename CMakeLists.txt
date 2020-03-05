@@ -98,4 +98,5 @@ add_executable(push_swap
         libft/number_len_ull.c
         libft/to_uppercase.c
         libft/ulltoa_base.c
-        author includes/push_swap.h src/checker.c)
+        libft/get_next_line.c
+        author includes/push_swap.h src/checker.c src/check_instr.c)
