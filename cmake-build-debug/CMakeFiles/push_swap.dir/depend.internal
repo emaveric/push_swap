@@ -264,6 +264,10 @@ CMakeFiles/push_swap.dir/libft/to_uppercase.c.o
 CMakeFiles/push_swap.dir/libft/ulltoa_base.c.o
  /Users/emaveric/push_swap/libft/libft.h
  /Users/emaveric/push_swap/libft/ulltoa_base.c
+CMakeFiles/push_swap.dir/src/check_all.c.o
+ /Users/emaveric/push_swap/includes/push_swap.h
+ /Users/emaveric/push_swap/libft/libft.h
+ /Users/emaveric/push_swap/src/check_all.c
 CMakeFiles/push_swap.dir/src/check_instr.c.o
  /Users/emaveric/push_swap/includes/push_swap.h
  /Users/emaveric/push_swap/libft/libft.h
@@ -272,3 +276,7 @@ CMakeFiles/push_swap.dir/src/checker.c.o
  /Users/emaveric/push_swap/includes/push_swap.h
  /Users/emaveric/push_swap/libft/libft.h
  /Users/emaveric/push_swap/src/checker.c
+CMakeFiles/push_swap.dir/src/free.c.o
+ /Users/emaveric/push_swap/includes/push_swap.h
+ /Users/emaveric/push_swap/libft/libft.h
+ /Users/emaveric/push_swap/src/free.c

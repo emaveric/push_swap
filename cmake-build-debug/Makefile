@@ -2499,6 +2499,33 @@ libft/ulltoa_base.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/ulltoa_base.c.s
 .PHONY : libft/ulltoa_base.c.s
 
+src/check_all.o: src/check_all.c.o
+
+.PHONY : src/check_all.o
+
+# target to build an object file
+src/check_all.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_all.c.o
+.PHONY : src/check_all.c.o
+
+src/check_all.i: src/check_all.c.i
+
+.PHONY : src/check_all.i
+
+# target to preprocess a source file
+src/check_all.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_all.c.i
+.PHONY : src/check_all.c.i
+
+src/check_all.s: src/check_all.c.s
+
+.PHONY : src/check_all.s
+
+# target to generate assembly for a file
+src/check_all.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_all.c.s
+.PHONY : src/check_all.c.s
+
 src/check_instr.o: src/check_instr.c.o
 
 .PHONY : src/check_instr.o
@@ -2552,6 +2579,33 @@ src/checker.s: src/checker.c.s
 src/checker.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/checker.c.s
 .PHONY : src/checker.c.s
+
+src/free.o: src/free.c.o
+
+.PHONY : src/free.o
+
+# target to build an object file
+src/free.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/free.c.o
+.PHONY : src/free.c.o
+
+src/free.i: src/free.c.i
+
+.PHONY : src/free.i
+
+# target to preprocess a source file
+src/free.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/free.c.i
+.PHONY : src/free.c.i
+
+src/free.s: src/free.c.s
+
+.PHONY : src/free.s
+
+# target to generate assembly for a file
+src/free.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/free.c.s
+.PHONY : src/free.c.s
 
 # Help Target
 help:
@@ -2826,12 +2880,18 @@ help:
 	@echo "... libft/ulltoa_base.o"
 	@echo "... libft/ulltoa_base.i"
 	@echo "... libft/ulltoa_base.s"
+	@echo "... src/check_all.o"
+	@echo "... src/check_all.i"
+	@echo "... src/check_all.s"
 	@echo "... src/check_instr.o"
 	@echo "... src/check_instr.i"
 	@echo "... src/check_instr.s"
 	@echo "... src/checker.o"
 	@echo "... src/checker.i"
 	@echo "... src/checker.s"
+	@echo "... src/free.o"
+	@echo "... src/free.i"
+	@echo "... src/free.s"
 .PHONY : help
 
 

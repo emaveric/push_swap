@@ -264,6 +264,10 @@ CMakeFiles/push_swap.dir/libft/to_uppercase.c.o: ../libft/to_uppercase.c
 CMakeFiles/push_swap.dir/libft/ulltoa_base.c.o: ../libft/libft.h
 CMakeFiles/push_swap.dir/libft/ulltoa_base.c.o: ../libft/ulltoa_base.c
 
+CMakeFiles/push_swap.dir/src/check_all.c.o: ../includes/push_swap.h
+CMakeFiles/push_swap.dir/src/check_all.c.o: ../libft/libft.h
+CMakeFiles/push_swap.dir/src/check_all.c.o: ../src/check_all.c
+
 CMakeFiles/push_swap.dir/src/check_instr.c.o: ../includes/push_swap.h
 CMakeFiles/push_swap.dir/src/check_instr.c.o: ../libft/libft.h
 CMakeFiles/push_swap.dir/src/check_instr.c.o: ../src/check_instr.c
@@ -271,4 +275,8 @@ CMakeFiles/push_swap.dir/src/check_instr.c.o: ../src/check_instr.c
 CMakeFiles/push_swap.dir/src/checker.c.o: ../includes/push_swap.h
 CMakeFiles/push_swap.dir/src/checker.c.o: ../libft/libft.h
 CMakeFiles/push_swap.dir/src/checker.c.o: ../src/checker.c
+
+CMakeFiles/push_swap.dir/src/free.c.o: ../includes/push_swap.h
+CMakeFiles/push_swap.dir/src/free.c.o: ../libft/libft.h
+CMakeFiles/push_swap.dir/src/free.c.o: ../src/free.c
 

@@ -89,6 +89,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/push_swap.dir/libft/get_next_line.c.o"
   "CMakeFiles/push_swap.dir/src/checker.c.o"
   "CMakeFiles/push_swap.dir/src/check_instr.c.o"
+  "CMakeFiles/push_swap.dir/src/check_all.c.o"
+  "CMakeFiles/push_swap.dir/src/free.c.o"
   "push_swap.pdb"
   "push_swap"
 )

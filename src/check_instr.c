@@ -6,7 +6,7 @@
 /*   By: emaveric <emaveric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 19:16:44 by emaveric          #+#    #+#             */
-/*   Updated: 2020/03/05 21:08:48 by emaveric         ###   ########.fr       */
+/*   Updated: 2020/03/07 18:25:20 by emaveric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	p_exec(t_ps *ps, t_num *a, t_num *b, char *line)
 	if (ft_strnequ(line, "pa", 3))
 	{
 		b = ps->head_b;
-		if (b)
+		if (b->ind != -1)
 		{
 			ps->head_b = b->next;
 			ps->head_a->prev = b;
@@ -59,7 +59,7 @@ void	p_exec(t_ps *ps, t_num *a, t_num *b, char *line)
 	else if (ft_strnequ(line, "pb", 3))
 	{
 		a = ps->head_a;
-		if (a)
+		if (a->ind != -1)
 		{
 			ps->head_a = a->next;
 			ps->head_b->prev = a;
@@ -74,7 +74,8 @@ void	rr_exec(t_ps *ps, t_num *a, t_num *b, char *line)
 {
 	a = ps->head_a;
 	b = ps->head_b;
-	if (ft_strnequ(line, "ra", 3) || ft_strnequ(line, "rr", 3))
+	if ((ft_strnequ(line, "ra", 3) || ft_strnequ(line, "rr", 3))
+		&& a->ind != -1)
 	{
 		ps->head_a = a->next;
 		ps->tail_a->next = a;
@@ -83,7 +84,8 @@ void	rr_exec(t_ps *ps, t_num *a, t_num *b, char *line)
 		a->next = NULL;
 		ps->head_a->prev = NULL;
 	}
-	if (ft_strnequ(line, "rb", 3) || ft_strnequ(line, "rr", 3))
+	if ((ft_strnequ(line, "rb", 3) || ft_strnequ(line, "rr", 3))
+		&& b->ind != -1)
 	{
 		ps->head_b = b->next;
 		ps->tail_b->next = b;
@@ -98,7 +100,8 @@ void	rrr_exec(t_ps *ps, t_num *a, t_num *b, char *line)
 {
 	a = ps->tail_a;
 	b = ps->tail_b;
-	if (ft_strnequ(line, "rra", 3) || ft_strnequ(line, "rrr", 3))
+	if ((ft_strnequ(line, "rra", 4) || ft_strnequ(line, "rrr", 4))
+		&& a->ind != -1)
 	{
 		ps->tail_a = a->prev;
 		ps->head_a->prev = a;
@@ -107,7 +110,8 @@ void	rrr_exec(t_ps *ps, t_num *a, t_num *b, char *line)
 		a->prev = NULL;
 		ps->tail_a->next = NULL;
 	}
-	if (ft_strnequ(line, "rb", 3) || ft_strnequ(line, "rr", 3))
+	if ((ft_strnequ(line, "rrb", 4) || ft_strnequ(line, "rrr", 4))
+		&& b->ind != -1)
 	{
 		ps->tail_b = b->prev;
 		ps->head_b->prev = b;

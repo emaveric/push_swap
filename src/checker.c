@@ -6,7 +6,7 @@
 /*   By: emaveric <emaveric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 16:38:32 by emaveric          #+#    #+#             */
-/*   Updated: 2020/03/05 21:41:12 by emaveric         ###   ########.fr       */
+/*   Updated: 2020/03/07 17:41:36 by emaveric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,40 +31,15 @@ t_ps	*init_ps(void)
 
 	if (!(new = (t_ps *)malloc(sizeof(t_ps))))
 		return (NULL);
-	new->head_a = NULL;
-	new->tail_a = NULL;
+	/*new->head_a = NULL;
 	new->head_b = NULL;
-	new->tail_b = NULL;
+	new->tail_a = NULL;
+	new->tail_b = NULL;*/
+	new->head_a = init_num();
+	new->tail_a = init_num();
+	new->head_b = init_num();
+	new->tail_b = init_num();
 	return (new);
-}
-
-int 	check_valid_instr(char *line)
-{
-	if (ft_strnequ(line, "sa", 3))
-		return (1);
-	else if (ft_strnequ(line, "sb", 3))
-		return (1);
-	else if (ft_strnequ(line, "sb", 3))
-		return (1);
-	else if (ft_strnequ(line, "ss", 3))
-		return (1);
-	else if (ft_strnequ(line, "pa", 3))
-		return (1);
-	else if (ft_strnequ(line, "pb", 3))
-		return (1);
-	else if (ft_strnequ(line, "ra", 3))
-		return (1);
-	else if (ft_strnequ(line, "rb", 3))
-		return (1);
-	else if (ft_strnequ(line, "rr", 3))
-		return (1);
-	else if (ft_strnequ(line, "rra", 4))
-		return (1);
-	else if (ft_strnequ(line, "rrb", 4))
-		return (1);
-	else if (ft_strnequ(line, "rrr", 4))
-		return (1);
-	return (0);
 }
 
 int		read_instr(t_ps *ps, t_num *a, t_num *b)
@@ -85,74 +60,6 @@ int		read_instr(t_ps *ps, t_num *a, t_num *b)
 	return (0);
 }
 
-void	check_ind(t_ps *ps, t_num *a)
-{
-	int		min;
-	int 	m_ind;
-	t_num	*flag;
-
-	a = ps->head_a;
-	min = a->data;
-	flag = a;
-	m_ind = 0;
-	while (a)
-	{
-		if (min > a->data && a->ind == -1)
-		{
-			min = a->data;
-			flag = a;
-		}
-		a = a->next;
-		if (a == NULL && flag != NULL)
-		{
-			flag->ind = m_ind;
-			m_ind++;
-			flag = NULL;
-			a = ps->head_a;
-			min = 2147483647;
-		}
-	}
-}
-
-void	check_num(t_ps *ps, t_num *a, char **av)
-{
-	t_num	*tmp;
-
-	tmp = a;
-	av += 1;
-	while (*av != NULL)
-	{
-		while (**av)
-		{
-			if (**av == ' ')
-				*av += 1;
-			else if (**av >= '0' && **av < '9')
-			{
-				if (ft_atoi(*av) < -2147483648 || ft_atoi(*av) > 2147483647)
-					return ;
-				a->data = ft_atoi(*av);
-				if (ps->head_a == NULL)
-					ps->head_a = a;
-				a->ind = -1;
-				if (*(av + 1))
-				{
-					a->next = init_num();
-					a = a->next;
-					tmp->next = a;
-					a->prev = tmp;
-					tmp = a;
-				}
-				*av += 1;
-			}
-			while (**av == ' ' && **av)
-				*av += 1;
-		}
-		av++;
-	}
-	a->next = NULL;
-	ps->tail_a = a;
-}
-
 int 	main(int ac, char **av)
 {
 	t_num	*a;
@@ -167,7 +74,8 @@ int 	main(int ac, char **av)
 			return (-1);
 		if (!(b = init_num()))
 			return (-1);
-		check_num(ps, a, av);
+		if (check_num(ps, a, av) == -1)
+			return (0);
 		check_ind(ps, a);
 		a = ps->head_a;
 		while (a != NULL)
@@ -176,6 +84,12 @@ int 	main(int ac, char **av)
 			a = a->next;
 		}
 		read_instr(ps, a, b);
+		check_sort(ps, a);
+		a = ps->head_a;
+		free_t_num(a);
+		free_t_num(ps->head_b);
+		free(ps);
+		// почистить списки нормально !!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	}
 	a = ps->head_a;
 	while (a != NULL)
