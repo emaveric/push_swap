@@ -6,7 +6,7 @@
 /*   By: emaveric <emaveric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 16:42:34 by emaveric          #+#    #+#             */
-/*   Updated: 2020/03/07 16:46:26 by emaveric         ###   ########.fr       */
+/*   Updated: 2020/03/12 18:37:15 by emaveric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,10 +79,13 @@ void	check_ind(t_ps *ps, t_num *a)
 			min = a->data;
 			flag = a;
 		}
+		ps->max = a->data;
 		a = a->next;
 		if (a == NULL && flag != NULL)
 		{
 			flag->ind = m_ind;
+			if (m_ind == 0)
+				ps->min = flag->data;
 			m_ind++;
 			flag = NULL;
 			a = ps->head_a;
@@ -103,7 +106,7 @@ int		check_num(t_ps *ps, t_num *a, char **av)
 		{
 			if (**av == ' ')
 				*av += 1;
-			else if (**av >= '0' && **av < '9')
+			else if (**av >= '0' && **av <= '9')
 			{
 				if (ft_atoi(*av) < -2147483648 || ft_atoi(*av) > 2147483647)
 					return (-1);

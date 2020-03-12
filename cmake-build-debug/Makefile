@@ -2607,6 +2607,87 @@ src/free.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/free.c.s
 .PHONY : src/free.c.s
 
+src/individual_cases.o: src/individual_cases.c.o
+
+.PHONY : src/individual_cases.o
+
+# target to build an object file
+src/individual_cases.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/individual_cases.c.o
+.PHONY : src/individual_cases.c.o
+
+src/individual_cases.i: src/individual_cases.c.i
+
+.PHONY : src/individual_cases.i
+
+# target to preprocess a source file
+src/individual_cases.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/individual_cases.c.i
+.PHONY : src/individual_cases.c.i
+
+src/individual_cases.s: src/individual_cases.c.s
+
+.PHONY : src/individual_cases.s
+
+# target to generate assembly for a file
+src/individual_cases.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/individual_cases.c.s
+.PHONY : src/individual_cases.c.s
+
+src/push_swap.o: src/push_swap.c.o
+
+.PHONY : src/push_swap.o
+
+# target to build an object file
+src/push_swap.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/push_swap.c.o
+.PHONY : src/push_swap.c.o
+
+src/push_swap.i: src/push_swap.c.i
+
+.PHONY : src/push_swap.i
+
+# target to preprocess a source file
+src/push_swap.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/push_swap.c.i
+.PHONY : src/push_swap.c.i
+
+src/push_swap.s: src/push_swap.c.s
+
+.PHONY : src/push_swap.s
+
+# target to generate assembly for a file
+src/push_swap.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/push_swap.c.s
+.PHONY : src/push_swap.c.s
+
+src/search.o: src/search.c.o
+
+.PHONY : src/search.o
+
+# target to build an object file
+src/search.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/search.c.o
+.PHONY : src/search.c.o
+
+src/search.i: src/search.c.i
+
+.PHONY : src/search.i
+
+# target to preprocess a source file
+src/search.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/search.c.i
+.PHONY : src/search.c.i
+
+src/search.s: src/search.c.s
+
+.PHONY : src/search.s
+
+# target to generate assembly for a file
+src/search.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/search.c.s
+.PHONY : src/search.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2892,6 +2973,15 @@ help:
 	@echo "... src/free.o"
 	@echo "... src/free.i"
 	@echo "... src/free.s"
+	@echo "... src/individual_cases.o"
+	@echo "... src/individual_cases.i"
+	@echo "... src/individual_cases.s"
+	@echo "... src/push_swap.o"
+	@echo "... src/push_swap.i"
+	@echo "... src/push_swap.s"
+	@echo "... src/search.o"
+	@echo "... src/search.i"
+	@echo "... src/search.s"
 .PHONY : help
 
 

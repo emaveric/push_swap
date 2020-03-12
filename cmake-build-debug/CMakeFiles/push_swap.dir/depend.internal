@@ -280,3 +280,15 @@ CMakeFiles/push_swap.dir/src/free.c.o
  /Users/emaveric/push_swap/includes/push_swap.h
  /Users/emaveric/push_swap/libft/libft.h
  /Users/emaveric/push_swap/src/free.c
+CMakeFiles/push_swap.dir/src/individual_cases.c.o
+ /Users/emaveric/push_swap/includes/push_swap.h
+ /Users/emaveric/push_swap/libft/libft.h
+ /Users/emaveric/push_swap/src/individual_cases.c
+CMakeFiles/push_swap.dir/src/push_swap.c.o
+ /Users/emaveric/push_swap/includes/push_swap.h
+ /Users/emaveric/push_swap/libft/libft.h
+ /Users/emaveric/push_swap/src/push_swap.c
+CMakeFiles/push_swap.dir/src/search.c.o
+ /Users/emaveric/push_swap/includes/push_swap.h
+ /Users/emaveric/push_swap/libft/libft.h
+ /Users/emaveric/push_swap/src/search.c

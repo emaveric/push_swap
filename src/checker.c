@@ -6,7 +6,7 @@
 /*   By: emaveric <emaveric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 16:38:32 by emaveric          #+#    #+#             */
-/*   Updated: 2020/03/07 17:41:36 by emaveric         ###   ########.fr       */
+/*   Updated: 2020/03/12 20:37:13 by emaveric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_num	*init_num(void)
 		return (NULL);
 	new->data = 0;
 	new->ind = -1;
+	new->flag_b = 0;
 	new->next = NULL;
 	new->prev = NULL;
 	return (new);
@@ -35,6 +36,11 @@ t_ps	*init_ps(void)
 	new->head_b = NULL;
 	new->tail_a = NULL;
 	new->tail_b = NULL;*/
+	new->flag = 0;
+	new->max = 0;
+	new->mid = 0;
+	new->min = 0;
+	new->kol = 0;
 	new->head_a = init_num();
 	new->tail_a = init_num();
 	new->head_b = init_num();
@@ -60,6 +66,7 @@ int		read_instr(t_ps *ps, t_num *a, t_num *b)
 	return (0);
 }
 
+/*
 int 	main(int ac, char **av)
 {
 	t_num	*a;
@@ -98,4 +105,4 @@ int 	main(int ac, char **av)
 		a = a->next;
 	}
 	return (0);
-}
+}*/

@@ -280,3 +280,15 @@ CMakeFiles/push_swap.dir/src/free.c.o: ../includes/push_swap.h
 CMakeFiles/push_swap.dir/src/free.c.o: ../libft/libft.h
 CMakeFiles/push_swap.dir/src/free.c.o: ../src/free.c
 
+CMakeFiles/push_swap.dir/src/individual_cases.c.o: ../includes/push_swap.h
+CMakeFiles/push_swap.dir/src/individual_cases.c.o: ../libft/libft.h
+CMakeFiles/push_swap.dir/src/individual_cases.c.o: ../src/individual_cases.c
+
+CMakeFiles/push_swap.dir/src/push_swap.c.o: ../includes/push_swap.h
+CMakeFiles/push_swap.dir/src/push_swap.c.o: ../libft/libft.h
+CMakeFiles/push_swap.dir/src/push_swap.c.o: ../src/push_swap.c
+
+CMakeFiles/push_swap.dir/src/search.c.o: ../includes/push_swap.h
+CMakeFiles/push_swap.dir/src/search.c.o: ../libft/libft.h
+CMakeFiles/push_swap.dir/src/search.c.o: ../src/search.c
+

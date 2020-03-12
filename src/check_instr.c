@@ -6,7 +6,7 @@
 /*   By: emaveric <emaveric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 19:16:44 by emaveric          #+#    #+#             */
-/*   Updated: 2020/03/07 18:25:20 by emaveric         ###   ########.fr       */
+/*   Updated: 2020/03/12 21:20:00 by emaveric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void	p_exec(t_ps *ps, t_num *a, t_num *b, char *line)
 			a->next = ps->head_b;
 			ps->head_b = a;
 			ps->head_a->prev = NULL;
+			//a = ps->head_a;
 		}
 	}
 }
