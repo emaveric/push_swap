@@ -381,6 +381,9 @@
 		<Unit filename="/Users/emaveric/push_swap/src/individual_cases.c">
 			<Option target="push_swap"/>
 		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/main_alg.c">
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/Users/emaveric/push_swap/src/push_swap.c">
 			<Option target="push_swap"/>
 		</Unit>

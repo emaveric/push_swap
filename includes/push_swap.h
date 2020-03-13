@@ -6,7 +6,7 @@
 /*   By: emaveric <emaveric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 16:09:37 by emaveric          #+#    #+#             */
-/*   Updated: 2020/03/12 20:26:32 by emaveric         ###   ########.fr       */
+/*   Updated: 2020/03/13 16:18:24 by emaveric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ typedef struct			s_ps
 	int					mid;
 	int 				min;
 	int 				kol;
+	int 				count_a;
+	int 				count_b;
 }						t_ps;
 
 void	instr_execution(t_ps *ps, t_num *a, t_num *b, char *line);
@@ -57,5 +59,9 @@ void	for_two_el_alg(t_ps *ps, t_num *a, t_num *b);
 void	for_three_el_alg(t_ps *ps, t_num *a, t_num *b, int k);
 void	for_four_el_alg(t_ps *ps, t_num *a, t_num *b, int k);
 void	for_five_el_alg(t_ps *ps, t_num *a, t_num *b);
+void	max_search(t_ps *ps, t_num *n);
+void	count_search(t_ps *ps, t_num *n, int k);
+void	sort_b_two_el(t_ps *ps, t_num *a, t_num *b);
+void	sort_b_three_el(t_ps *ps, t_num *a, t_num *b);
 
 #endif

@@ -2634,6 +2634,33 @@ src/individual_cases.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/individual_cases.c.s
 .PHONY : src/individual_cases.c.s
 
+src/main_alg.o: src/main_alg.c.o
+
+.PHONY : src/main_alg.o
+
+# target to build an object file
+src/main_alg.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/main_alg.c.o
+.PHONY : src/main_alg.c.o
+
+src/main_alg.i: src/main_alg.c.i
+
+.PHONY : src/main_alg.i
+
+# target to preprocess a source file
+src/main_alg.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/main_alg.c.i
+.PHONY : src/main_alg.c.i
+
+src/main_alg.s: src/main_alg.c.s
+
+.PHONY : src/main_alg.s
+
+# target to generate assembly for a file
+src/main_alg.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/main_alg.c.s
+.PHONY : src/main_alg.c.s
+
 src/push_swap.o: src/push_swap.c.o
 
 .PHONY : src/push_swap.o
@@ -2976,6 +3003,9 @@ help:
 	@echo "... src/individual_cases.o"
 	@echo "... src/individual_cases.i"
 	@echo "... src/individual_cases.s"
+	@echo "... src/main_alg.o"
+	@echo "... src/main_alg.i"
+	@echo "... src/main_alg.s"
 	@echo "... src/push_swap.o"
 	@echo "... src/push_swap.i"
 	@echo "... src/push_swap.s"

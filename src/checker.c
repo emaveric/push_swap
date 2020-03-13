@@ -6,7 +6,7 @@
 /*   By: emaveric <emaveric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 16:38:32 by emaveric          #+#    #+#             */
-/*   Updated: 2020/03/12 20:37:13 by emaveric         ###   ########.fr       */
+/*   Updated: 2020/03/13 17:10:08 by emaveric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,19 +32,21 @@ t_ps	*init_ps(void)
 
 	if (!(new = (t_ps *)malloc(sizeof(t_ps))))
 		return (NULL);
-	/*new->head_a = NULL;
+	/*new->head_a = NULL;*/
 	new->head_b = NULL;
 	new->tail_a = NULL;
-	new->tail_b = NULL;*/
+	new->tail_b = NULL;
 	new->flag = 0;
 	new->max = 0;
 	new->mid = 0;
 	new->min = 0;
-	new->kol = 0;
+	new->kol = 6;
+	new->count_a = 0;
+	new->count_b = 0;
 	new->head_a = init_num();
-	new->tail_a = init_num();
+	/*new->tail_a = init_num();
 	new->head_b = init_num();
-	new->tail_b = init_num();
+	new->tail_b = init_num();*/
 	return (new);
 }
 

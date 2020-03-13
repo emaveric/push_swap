@@ -97,6 +97,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/emaveric/push_swap/src/checker.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/checker.c.o"
   "/Users/emaveric/push_swap/src/free.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/free.c.o"
   "/Users/emaveric/push_swap/src/individual_cases.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/individual_cases.c.o"
+  "/Users/emaveric/push_swap/src/main_alg.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/main_alg.c.o"
   "/Users/emaveric/push_swap/src/push_swap.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/push_swap.c.o"
   "/Users/emaveric/push_swap/src/search.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/search.c.o"
   )

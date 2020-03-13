@@ -26,7 +26,7 @@ limits.h
 fcntl.h
 -
 
-/Users/emaveric/push_swap/src/check_instr.c
+/Users/emaveric/push_swap/src/push_swap.c
 ../includes/push_swap.h
 /Users/emaveric/push_swap/includes/push_swap.h
 

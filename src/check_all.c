@@ -6,7 +6,7 @@
 /*   By: emaveric <emaveric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 16:42:34 by emaveric          #+#    #+#             */
-/*   Updated: 2020/03/12 18:37:15 by emaveric         ###   ########.fr       */
+/*   Updated: 2020/03/13 19:52:15 by emaveric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int 	check_sort(t_ps *ps, t_num *a)
 
 	ind = 0;
 	a = ps->head_a;
-	printf("\n\nhead_b: data %d ind %d\n\n", ps->head_b->data, ps->head_b->ind);
+	//printf("\n\nhead_b: data %d ind %d\n\n", ps->head_b->data, ps->head_b->ind);
 	while (a)
 	{
 		if (ind != a->ind || ps->head_b->ind != -1)
@@ -97,16 +97,19 @@ void	check_ind(t_ps *ps, t_num *a)
 int		check_num(t_ps *ps, t_num *a, char **av)
 {
 	t_num	*tmp;
+	int 	minus;
 
 	tmp = a;
 	av += 1;
+	minus = 0;
 	while (*av != NULL)
 	{
-		while (**av)
+		while (*av && **av)
 		{
 			if (**av == ' ')
 				*av += 1;
-			else if (**av >= '0' && **av <= '9')
+			else if ((**av >= '0' && **av <= '9'))// || (**av == '-' &&
+				//	*(*av + 1) >= '0' && *(*av + 1) <= '9'))
 			{
 				if (ft_atoi(*av) < -2147483648 || ft_atoi(*av) > 2147483647)
 					return (-1);
@@ -118,22 +121,25 @@ int		check_num(t_ps *ps, t_num *a, char **av)
 				{
 					if (!(a->next = init_num()))
 						return (-1);
+					//printf("data %d ind %d\n", a->data, a->ind);
 					a = a->next;
 					tmp->next = a;
 					a->prev = tmp;
 					tmp = a;
 				}
 				*av += 1;
+				if (**av != ' ')
+					av++;
 			}
 			else
 			{
 				printf("Error\n");
 				return (-1);
 			}
-			while (**av == ' ' && **av)
+			while (*av && **av && **av == ' ')
 				*av += 1;
 		}
-		av++;
+		//av++;
 	}
 	a->next = NULL;
 	ps->tail_a = a;

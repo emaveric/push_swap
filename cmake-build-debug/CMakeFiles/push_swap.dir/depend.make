@@ -284,6 +284,10 @@ CMakeFiles/push_swap.dir/src/individual_cases.c.o: ../includes/push_swap.h
 CMakeFiles/push_swap.dir/src/individual_cases.c.o: ../libft/libft.h
 CMakeFiles/push_swap.dir/src/individual_cases.c.o: ../src/individual_cases.c
 
+CMakeFiles/push_swap.dir/src/main_alg.c.o: ../includes/push_swap.h
+CMakeFiles/push_swap.dir/src/main_alg.c.o: ../libft/libft.h
+CMakeFiles/push_swap.dir/src/main_alg.c.o: ../src/main_alg.c
+
 CMakeFiles/push_swap.dir/src/push_swap.c.o: ../includes/push_swap.h
 CMakeFiles/push_swap.dir/src/push_swap.c.o: ../libft/libft.h
 CMakeFiles/push_swap.dir/src/push_swap.c.o: ../src/push_swap.c
