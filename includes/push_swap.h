@@ -6,7 +6,7 @@
 /*   By: emaveric <emaveric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 16:09:37 by emaveric          #+#    #+#             */
-/*   Updated: 2020/03/13 16:18:24 by emaveric         ###   ########.fr       */
+/*   Updated: 2020/03/14 21:17:17 by emaveric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,10 @@ typedef struct			s_ps
 
 void	instr_execution(t_ps *ps, t_num *a, t_num *b, char *line);
 int 	check_sort(t_ps *ps, t_num *a);
+int 	check_rep_value(t_num *a, int data, int ind);
+int 	check_start_sort(t_ps *ps, t_num *a);
 int 	check_valid_instr(char *line);
-void	check_ind(t_ps *ps, t_num *a);
+int		check_ind(t_ps *ps, t_num *a);
 int		check_num(t_ps *ps, t_num *a, char **av);
 t_num	*init_num(void);
 t_ps	*init_ps(void);

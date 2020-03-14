@@ -95,6 +95,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/push_swap.dir/src/individual_cases.c.o"
   "CMakeFiles/push_swap.dir/src/push_swap.c.o"
   "CMakeFiles/push_swap.dir/src/main_alg.c.o"
+  "CMakeFiles/push_swap.dir/src/check_valid.c.o"
   "push_swap.pdb"
   "push_swap"
 )

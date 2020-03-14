@@ -6,7 +6,7 @@
 /*   By: emaveric <emaveric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 15:56:08 by emaveric          #+#    #+#             */
-/*   Updated: 2020/03/13 21:55:38 by emaveric         ###   ########.fr       */
+/*   Updated: 2020/03/14 21:19:48 by emaveric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 void	sort_b(t_ps *ps, t_num *a, t_num *b, int k)
 {
 	t_num	*tmp;
+	int 	max_data;
 
-	ps->max = -2147483648;
-	ps->min = 2147483647;
+	//ps->min = 2147483647;
+	max_data = 2147483647;
 	min_search(ps, ps->head_b, -1);
 	ps->mid = (ps->max - ps->min) / 2 + ps->min;
 	if (k == 0)
 		ps->flag++;
 	b = ps->head_b;
 	count_search(ps, ps->head_b, 2);
-	//while (b)
 	if (ps->count_b == 2)
 	{
 		sort_b_two_el(ps, a, b);
@@ -35,28 +35,29 @@ void	sort_b(t_ps *ps, t_num *a, t_num *b, int k)
 		sort_b_three_el(ps, a, b);
 		return ;
 	}
-	while(ps->count_b > 0)
+	while (ps->count_b > 0)
 	{
 		tmp = b->next;
 		if (b->data > ps->mid && b->data != ps->min)
 		{
 			b->flag_b = ps->flag;
-			/*if (b->next)
-				b = b->next;*/
+			max_data = b->data;
 			p_exec(ps, ps->head_a, ps->head_b, "pa");
-			b = tmp;
 			//printf("QQQdata %d ind %d flag_b %d\n", ps->head_a->data, ps->head_a->ind, ps->head_a->flag_b);
 		}
 		else if (b->data == ps->min)
 		{
 			b->flag_b = -1;
-		/*	if (b->next)
-				b = b->next;*/
 			p_exec(ps, ps->head_a, ps->head_b, "pa");
 			rr_exec(ps, ps->head_a, ps->head_b, "ra");
-			ps->min = 2147483647;
+			//ps->min = 2147483647;
 			min_search(ps, ps->head_b, -1);
-			b = tmp;
+			if (ps->head_b && ps->min > max_data)
+			{
+				ps->count_b--;
+				ps->head_b->flag_b = ps->flag;
+				p_exec(ps, ps->head_a, ps->head_b, "pa");
+			}
 		}
 		else
 			rr_exec(ps, ps->head_a, ps->head_b, "rb");
@@ -65,23 +66,18 @@ void	sort_b(t_ps *ps, t_num *a, t_num *b, int k)
 	}
 	ps->max = ps->mid;
 	if (ps->head_b)
-		sort_b(ps, a, b, k);
+		sort_b(ps, a, b, 0);
 }
 
 void 	from_a_to_b(t_ps *ps, t_num *a, int k)
 {
-	int 	data;
-	int 	ind;
 	t_num	*tmp;
 
 	a = ps->head_a;
-	data = a->data;
-	ind = 0;
-	ps->max = -2147483648;
-	ps->min = 2147483647;
 	if (ps->flag == 0)
 	{
-
+		/*ps->max = -2147483648;
+		ps->min = 2147483647;*/
 		count_search(ps, ps->head_a, 1);
 		min_search(ps, ps->head_a, 0);
 		max_search(ps, ps->head_a);
@@ -89,28 +85,17 @@ void 	from_a_to_b(t_ps *ps, t_num *a, int k)
 			ps->mid = ps->max / 2 + ps->min;
 		else
 			ps->mid = (ps->max - ps->min) / 2 + ps->min;
-		//while (data != a->data || ind == 0)
 		while (ps->count_a > 0)
 		{
 			tmp = a->next;
 			if (a->data > ps->mid && a->flag_b != -1)
-			{
-				//a = a->next;
 				rr_exec(ps, ps->head_a, ps->head_b, "ra");
-				//a = tmp;
-			}
 			else if (a->flag_b != -1)
-			{
-				//a = a->next;
 				p_exec(ps, ps->head_a, ps->head_b, "pb");
-				//a = tmp;
-			}
 			ps->count_a--;
 			a = tmp;
-			//a = ps->head_a;
-			ind = 1;
 		}
-		ps->max = ps->mid;
+		max_search(ps, ps->head_b);
 	}
 	else
 	{
@@ -122,7 +107,6 @@ void 	from_a_to_b(t_ps *ps, t_num *a, int k)
 				if (ps->max < a->data)
 					ps->max = a->data;
 				p_exec(ps, ps->head_a, ps->head_b, "pb");
-				//a = ps->head_a;
 			}
 			a = tmp;
 		}
@@ -145,11 +129,17 @@ void	more_than_five_alg(t_ps *ps, t_num *a, t_num *b, int k)
 		a = a->next;
 	}
 	printf ("!!!!\n\n");
-	ps->max = -2147483648;
-	ps->min = 2147483647;
 	while (ps->flag > 0)
 	{
 		from_a_to_b(ps, a, k);
+	/*	b = ps->head_b;
+		printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+		while (b != NULL)
+		{
+			printf("data %d ind %d flag_b %d\n", b->data, b->ind, b->flag_b);
+			b = b->next;
+		}
+		printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n");*/
 		if (ps->head_b)
 			sort_b(ps, a, b, 1);
 		ps->flag--;
@@ -190,13 +180,13 @@ int 	start_alg(int ac, t_ps *ps, t_num *a, t_num *b)
 {
 	if (ac > 6)
 		more_than_five_alg(ps, a, b, 0);
-	if (ac == 6 || ps->kol == 5)
+	if (ac == 6)
 		for_five_el_alg(ps, a, b);
-	if (ac == 5 || ps->kol == 4)
+	if (ac == 5)
 		for_four_el_alg(ps, a, b, 0);
-	if (ac == 4 || ps->kol == 3)
+	if (ac == 4)
 		for_three_el_alg(ps, a, b, 0);
-	if (ac == 3 || ps->kol == 2)
+	if (ac == 3)
 		for_two_el_alg(ps, a, b);
 	return (0);
 }
@@ -217,7 +207,10 @@ int 	main(int ac, char **av)
 			//return (-1);
 		if (check_num(ps, ps->head_a, av) == -1)
 			return (0);
-		check_ind(ps, ps->head_a);
+		if (check_ind(ps, ps->head_a) == -1)
+			return (0);
+		if (check_start_sort(ps, ps->head_a) == 1)
+			return (0);
 		start_alg(ac, ps, ps->head_a, ps->head_b);
 	}
 	a = ps->head_a;

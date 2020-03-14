@@ -6,7 +6,7 @@
 /*   By: emaveric <emaveric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 19:16:44 by emaveric          #+#    #+#             */
-/*   Updated: 2020/03/13 20:14:36 by emaveric         ###   ########.fr       */
+/*   Updated: 2020/03/14 19:04:50 by emaveric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void 	s_exec(t_ps *ps, t_num *a, t_num *b, char *line)
 	{
 		if (a->next)
 		{
+			if (a->next->next)
+				a->next->next->prev = a;
 			ps->head_a = a->next;
 			a->next = a;
 			a->prev = ps->head_a;
@@ -30,6 +32,8 @@ void 	s_exec(t_ps *ps, t_num *a, t_num *b, char *line)
 	{
 		if (b->next)
 		{
+			if (b->next->next)
+				b->next->next->prev = b;
 			ps->head_b = b->next;
 			b->next = b;
 			b->prev = ps->head_b;

@@ -2553,6 +2553,33 @@ src/check_instr.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_instr.c.s
 .PHONY : src/check_instr.c.s
 
+src/check_valid.o: src/check_valid.c.o
+
+.PHONY : src/check_valid.o
+
+# target to build an object file
+src/check_valid.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_valid.c.o
+.PHONY : src/check_valid.c.o
+
+src/check_valid.i: src/check_valid.c.i
+
+.PHONY : src/check_valid.i
+
+# target to preprocess a source file
+src/check_valid.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_valid.c.i
+.PHONY : src/check_valid.c.i
+
+src/check_valid.s: src/check_valid.c.s
+
+.PHONY : src/check_valid.s
+
+# target to generate assembly for a file
+src/check_valid.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_valid.c.s
+.PHONY : src/check_valid.c.s
+
 src/checker.o: src/checker.c.o
 
 .PHONY : src/checker.o
@@ -2994,6 +3021,9 @@ help:
 	@echo "... src/check_instr.o"
 	@echo "... src/check_instr.i"
 	@echo "... src/check_instr.s"
+	@echo "... src/check_valid.o"
+	@echo "... src/check_valid.i"
+	@echo "... src/check_valid.s"
 	@echo "... src/checker.o"
 	@echo "... src/checker.i"
 	@echo "... src/checker.s"

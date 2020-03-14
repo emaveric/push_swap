@@ -6,7 +6,7 @@
 /*   By: emaveric <emaveric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/12 18:40:56 by emaveric          #+#    #+#             */
-/*   Updated: 2020/03/13 17:33:11 by emaveric         ###   ########.fr       */
+/*   Updated: 2020/03/14 19:15:34 by emaveric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	min_search(t_ps *ps, t_num *n, int k)
 {
+	ps->min = 2147483647;
 	if (k == 0)
 	{
 		while (n)
@@ -33,7 +34,6 @@ void	min_search(t_ps *ps, t_num *n, int k)
 		}
 	}
 	else
-	{
 		while (k != 0)
 		{
 			if (ps->min > n->data)
@@ -41,11 +41,11 @@ void	min_search(t_ps *ps, t_num *n, int k)
 			n = n->next;
 			k--;
 		}
-	}
 }
 
 void	max_search(t_ps *ps, t_num *n)
 {
+	ps->max = -2147483648;
 	while (n)
 	{
 		if (ps->max < n->data)

@@ -6,7 +6,7 @@
 /*   By: emaveric <emaveric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 16:42:34 by emaveric          #+#    #+#             */
-/*   Updated: 2020/03/13 19:52:15 by emaveric         ###   ########.fr       */
+/*   Updated: 2020/03/14 21:19:20 by emaveric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int 	check_sort(t_ps *ps, t_num *a)
 	//printf("\n\nhead_b: data %d ind %d\n\n", ps->head_b->data, ps->head_b->ind);
 	while (a)
 	{
-		if (ind != a->ind || ps->head_b->ind != -1)
+		if (ind != a->ind)
 		{
 			printf("KO\n");
 			return (0);
@@ -33,36 +33,7 @@ int 	check_sort(t_ps *ps, t_num *a)
 	return (0);
 }
 
-int 	check_valid_instr(char *line)
-{
-	if (ft_strnequ(line, "sa", 3))
-		return (1);
-	else if (ft_strnequ(line, "sb", 3))
-		return (1);
-	else if (ft_strnequ(line, "sb", 3))
-		return (1);
-	else if (ft_strnequ(line, "ss", 3))
-		return (1);
-	else if (ft_strnequ(line, "pa", 3))
-		return (1);
-	else if (ft_strnequ(line, "pb", 3))
-		return (1);
-	else if (ft_strnequ(line, "ra", 3))
-		return (1);
-	else if (ft_strnequ(line, "rb", 3))
-		return (1);
-	else if (ft_strnequ(line, "rr", 3))
-		return (1);
-	else if (ft_strnequ(line, "rra", 4))
-		return (1);
-	else if (ft_strnequ(line, "rrb", 4))
-		return (1);
-	else if (ft_strnequ(line, "rrr", 4))
-		return (1);
-	return (0);
-}
-
-void	check_ind(t_ps *ps, t_num *a)
+int		check_ind(t_ps *ps, t_num *a)
 {
 	int		min;
 	int 	m_ind;
@@ -80,6 +51,11 @@ void	check_ind(t_ps *ps, t_num *a)
 			flag = a;
 		}
 		ps->max = a->data;
+		if (check_rep_value(ps->head_a, a->data, a->ind) == -1)
+		{
+			printf("Error");
+			return (-1);
+		}
 		a = a->next;
 		if (a == NULL && flag != NULL)
 		{
@@ -92,6 +68,7 @@ void	check_ind(t_ps *ps, t_num *a)
 			min = 2147483647;
 		}
 	}
+	return (0);
 }
 
 int		check_num(t_ps *ps, t_num *a, char **av)
@@ -106,14 +83,21 @@ int		check_num(t_ps *ps, t_num *a, char **av)
 	{
 		while (*av && **av)
 		{
-			if (**av == ' ')
+			if (**av == '-')
+			{
 				*av += 1;
-			else if ((**av >= '0' && **av <= '9'))// || (**av == '-' &&
-				//	*(*av + 1) >= '0' && *(*av + 1) <= '9'))
+				minus = 1;
+			}
+			if (**av >= '0' && **av <= '9')
 			{
 				if (ft_atoi(*av) < -2147483648 || ft_atoi(*av) > 2147483647)
 					return (-1);
 				a->data = ft_atoi(*av);
+				if (minus == 1)
+				{
+					a->data *= -1;
+					minus = 0;
+				}
 				if (a->next == NULL && a->prev == NULL/*ps->head_a == NULL*/)
 					ps->head_a = a;
 				a->ind = -1;
@@ -131,6 +115,8 @@ int		check_num(t_ps *ps, t_num *a, char **av)
 				if (**av != ' ')
 					av++;
 			}
+			else if (**av == ' ' && minus == 0)
+				*av += 1;
 			else
 			{
 				printf("Error\n");
