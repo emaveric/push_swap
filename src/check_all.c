@@ -6,7 +6,7 @@
 /*   By: emaveric <emaveric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 16:42:34 by emaveric          #+#    #+#             */
-/*   Updated: 2020/03/14 21:19:20 by emaveric         ###   ########.fr       */
+/*   Updated: 2020/03/16 16:07:23 by emaveric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int 	check_sort(t_ps *ps, t_num *a)
 		if (ind != a->ind)
 		{
 			printf("KO\n");
+			printf("ind %d", a->ind);
 			return (0);
 		}
 		ind++;

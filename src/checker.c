@@ -6,7 +6,7 @@
 /*   By: emaveric <emaveric@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 16:38:32 by emaveric          #+#    #+#             */
-/*   Updated: 2020/03/14 16:50:48 by emaveric         ###   ########.fr       */
+/*   Updated: 2020/03/16 16:14:21 by emaveric         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ t_ps	*init_ps(void)
 	new->mid = 0;
 	new->min = 0;
 	new->kol = 1;
+	new->sum = 0;
+	new->min_ind = -1;
 	new->count_a = 0;
 	new->count_b = 0;
 	new->head_a = init_num();
