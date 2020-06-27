@@ -117,5 +117,6 @@ char				*ft_strncut(char *s, int start, int end);
 char				*itoa_base(int value, int base);
 void				ft_free(char **res, size_t i);
 int					get_next_line(const int fd, char **line);
+int					ft_atoi_max_int(int *n, const char *str);
 
 #endif

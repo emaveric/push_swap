@@ -53,7 +53,6 @@ void	sort_b_three_el(t_ps *ps, t_num *a, t_num *b)
 		ps->sum += 2;
 	}
 	sort_b_two_el(ps, ps->head_a, ps->head_b, 1);
-	ps->count_b = 0;
 }
 
 void	sort_b_two_el(t_ps *ps, t_num *a, t_num *b, int k)
@@ -73,5 +72,6 @@ void	sort_b_two_el(t_ps *ps, t_num *a, t_num *b, int k)
 	p_exec(ps, ps->head_a, ps->head_b, "pa");
 	rr_exec(ps, ps->head_a, ps->head_b, "ra");
 	ps->sum += 4;
+    ps->tail_b = NULL;
 	ps->count_b = 0;
 }

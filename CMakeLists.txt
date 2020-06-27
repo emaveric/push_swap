@@ -103,4 +103,4 @@ add_executable(push_swap
         includes/push_swap.h
         src/checker.c
         src/check_instr.c
-        src/check_all.c src/free.c src/search.c src/individual_cases.c src/push_swap.c src/main_alg.c src/check_valid.c)
+        src/check_all.c src/free.c src/search.c src/individual_cases.c src/push_swap.c src/main_alg.c src/check_valid.c libft/ft_atoi_int_max.c)

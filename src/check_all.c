@@ -36,9 +36,9 @@ int 	check_sort(t_ps *ps, t_num *a)
 
 int		check_ind(t_ps *ps, t_num *a)
 {
-	int		min;
-	int 	m_ind;
-	t_num	*flag;
+	long long		min;
+	int 			m_ind;
+	t_num			*flag;
 
 	a = ps->head_a;
 	min = a->data;
@@ -66,7 +66,7 @@ int		check_ind(t_ps *ps, t_num *a)
 			m_ind++;
 			flag = NULL;
 			a = ps->head_a;
-			min = 2147483647;
+			min = 2147483648;
 		}
 	}
 	return (0);
@@ -91,7 +91,8 @@ int		check_num(t_ps *ps, t_num *a, char **av)
 			}
 			if (**av >= '0' && **av <= '9')
 			{
-				if (ft_atoi(*av) < -2147483648 || ft_atoi(*av) > 2147483647)
+				if (ft_atoi_max_int(&a->data, *av) == -1)
+				//if (ft_atoi(*av) < -2147483648 || ft_atoi(*av) > 2147483647)
 					return (-1);
 				a->data = ft_atoi(*av);
 				if (minus == 1)

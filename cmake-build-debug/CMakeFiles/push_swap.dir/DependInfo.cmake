@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/emaveric/push_swap/libft/ft_atoi.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/ft_atoi.c.o"
   "/Users/emaveric/push_swap/libft/ft_atoi_base.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/ft_atoi_base.c.o"
+  "/Users/emaveric/push_swap/libft/ft_atoi_int_max.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/ft_atoi_int_max.c.o"
   "/Users/emaveric/push_swap/libft/ft_bzero.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/ft_bzero.c.o"
   "/Users/emaveric/push_swap/libft/ft_clear_table.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/ft_clear_table.c.o"
   "/Users/emaveric/push_swap/libft/ft_countwords.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/ft_countwords.c.o"

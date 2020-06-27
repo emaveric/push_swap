@@ -36,6 +36,8 @@ void	some_valid(t_ps *ps)
 		{
 			ps->head_a->flag_b = -1;
 			rr_exec(ps, ps->head_a, ps->head_b, "ra");
+			//if (ps->head_a->flag_b != ps->flag) // тест на ошибку при 500 с лишними флагами
+			//    ps->flag--;
 			ps->sum++;
 		}
 	}
@@ -50,10 +52,10 @@ void	sort_b(t_ps *ps, t_num *a, t_num *b, int k)
 	max_data = 0;
 	min_search(ps, ps->head_b, -1);
 	ps->mid = (ps->max - ps->min) / 2 + ps->min;
-	if (k == 0)
+    count_search(ps, ps->head_b, 2);
+	if (k == 0) //&& ps->count_b != 1)
 		ps->flag++;
 	b = ps->head_b;
-	count_search(ps, ps->head_b, 2);
 	if (ps->count_b == 2)
 	{
 		sort_b_two_el(ps, a, b, 0);
@@ -106,11 +108,14 @@ void	sort_b(t_ps *ps, t_num *a, t_num *b, int k)
 		b = ps->head_b;
 		ps->count_b--;
 	}
+	// ps->tail_b = null??
 	if (ps->head_b == NULL && k != 0)
 		ps->flag++;
 	ps->max = ps->mid;
 	if (ps->head_b)
 		sort_b(ps, a, b, 0);
+    else
+        ps->tail_b = NULL; // нужно ли? (пока не влияет ни на что)
 }
 
 void 	from_a_to_b(t_ps *ps, t_num *a, int k)
@@ -212,7 +217,7 @@ void	more_than_five_alg(t_ps *ps, t_num *a, t_num *b, int k)
 	printf ("!!!!\n\n");
 	while (ps->flag > 0)
 	{
-		some_valid(ps);
+		some_valid(ps); // нужна ли?
 		//count_search(ps, ps->head_a, 0);
 		/*if (ps->count_a == 5)
 			for_five_el_alg(ps, a, b);
@@ -233,7 +238,8 @@ void	more_than_five_alg(t_ps *ps, t_num *a, t_num *b, int k)
 		printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~\n");*/
 		if (ps->head_b)
 			sort_b(ps, a, b, 1);
-		ps->flag--;
+		if (ps->flag > ps->head_a->flag_b)
+		    ps->flag--;
 	}
 	a = ps->head_a;
 	while (a != NULL)
