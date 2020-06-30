@@ -102,6 +102,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/emaveric/push_swap/src/main_alg.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/main_alg.c.o"
   "/Users/emaveric/push_swap/src/push_swap.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/push_swap.c.o"
   "/Users/emaveric/push_swap/src/search.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/search.c.o"
+  "/Users/emaveric/push_swap/src/sort.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/sort.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

@@ -59,13 +59,16 @@ void	p_exec(t_ps *ps, t_num *a, t_num *b, char *line);
 void	rr_exec(t_ps *ps, t_num *a, t_num *b, char *line);
 void	rrr_exec(t_ps *ps, t_num *a, t_num *b, char *line);
 void	min_search(t_ps *ps, t_num *n, int k);
+void 	from_a_to_b(t_ps *ps, t_num *a, int k);
+void	sort_b(t_ps *ps, t_num *a, t_num *b, int k);
+void	some_valid(t_ps *ps);
 void	for_two_el_alg(t_ps *ps, t_num *a, t_num *b);
 void	for_three_el_alg(t_ps *ps, t_num *a, t_num *b, int k);
 void	for_four_el_alg(t_ps *ps, t_num *a, t_num *b, int k);
 void	for_five_el_alg(t_ps *ps, t_num *a, t_num *b);
 void	max_search(t_ps *ps, t_num *n);
 void	count_search(t_ps *ps, t_num *n, int k);
-void	sort_b_two_el(t_ps *ps, t_num *a, t_num *b, int k);
-void	sort_b_three_el(t_ps *ps, t_num *a, t_num *b);
+/*void	sort_b_two_el(t_ps *ps, t_num *a, t_num *b, int k);
+void	sort_b_three_el(t_ps *ps, t_num *a, t_num *b);*/
 
 #endif

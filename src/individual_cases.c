@@ -75,7 +75,7 @@ void	for_three_el_alg(t_ps *ps, t_num *a, t_num *b, int k)
 			rrr_exec(ps, ps->tail_a, ps->tail_b, "rra");
 		//	rr_exec(ps, ps->head_a, ps->head_b, "ra");
 			ps->sum += 1;
-		}
+		} // удалить ps->sum и в норме
 	}
 }
 

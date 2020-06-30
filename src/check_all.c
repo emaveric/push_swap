@@ -84,12 +84,12 @@ int		check_num(t_ps *ps, t_num *a, char **av)
 	{
 		while (*av && **av)
 		{
-			if (**av == '-')
+			if (**av == '-' && ft_strcmp(*av, "-2147483648") != 0)
 			{
 				*av += 1;
 				minus = 1;
 			}
-			if (**av >= '0' && **av <= '9')
+			if (**av >= '0' && **av <= '9' || ft_strcmp(*av, "-2147483648") == 0)
 			{
 				if (ft_atoi_max_int(&a->data, *av) == -1)
 				//if (ft_atoi(*av) < -2147483648 || ft_atoi(*av) > 2147483647)

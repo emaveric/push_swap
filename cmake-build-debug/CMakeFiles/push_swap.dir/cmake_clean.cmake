@@ -97,6 +97,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/push_swap.dir/src/main_alg.c.o"
   "CMakeFiles/push_swap.dir/src/push_swap.c.o"
   "CMakeFiles/push_swap.dir/src/search.c.o"
+  "CMakeFiles/push_swap.dir/src/sort.c.o"
   "push_swap"
   "push_swap.pdb"
 )

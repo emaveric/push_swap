@@ -303,3 +303,7 @@ CMakeFiles/push_swap.dir/src/search.c.o
  /Users/emaveric/push_swap/includes/push_swap.h
  /Users/emaveric/push_swap/libft/libft.h
  /Users/emaveric/push_swap/src/search.c
+CMakeFiles/push_swap.dir/src/sort.c.o
+ /Users/emaveric/push_swap/includes/push_swap.h
+ /Users/emaveric/push_swap/libft/libft.h
+ /Users/emaveric/push_swap/src/sort.c

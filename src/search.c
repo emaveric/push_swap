@@ -12,6 +12,19 @@
 
 #include "../includes/push_swap.h"
 
+void 	min_ind_search(t_ps *ps, t_num *n)
+{
+	while (n)
+	{
+		if (ps->min > n->data)
+		{
+			ps->min = n->data;
+			ps->min_ind = n->ind;
+		}
+		n = n->next;
+	}
+}
+
 void	min_search(t_ps *ps, t_num *n, int k)
 {
 	ps->min = 2147483647;
@@ -26,7 +39,8 @@ void	min_search(t_ps *ps, t_num *n, int k)
 		}
 	}
 	else if (k == -1)
-	{
+		min_ind_search(ps, n);
+	/*{
 		while (n)
 		{
 			if (ps->min > n->data)
@@ -36,7 +50,7 @@ void	min_search(t_ps *ps, t_num *n, int k)
 			}
 			n = n->next;
 		}
-	}
+	}*/
 	else
 		while (k != 0)
 		{
@@ -84,5 +98,4 @@ void	count_search(t_ps *ps, t_num *n, int k)
 			n = n->next;
 		}
 	}
-
 }

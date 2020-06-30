@@ -12,66 +12,134 @@
 
 #include "../includes/push_swap.h"
 
-void	sort_b_three_el(t_ps *ps, t_num *a, t_num *b)
+void	new_part(t_ps *ps, t_num *a, int count, t_num *tmp)
 {
-	if (ps->head_b->data == ps->min)
+	while (ps->count_a > 0)
 	{
-		ps->head_b->flag_b = -1;
-		p_exec(ps, ps->head_a, ps->head_b, "pa");
-		if (ps->head_b->data < ps->head_b->next->data)
+		tmp = a->next;
+		/*	if (count == 1) // нужно ли вообще? нужно ли условие  k != 0
+			{
+				ps->min_ind = ps->tail_a->ind;//
+				some_valid(ps); // эти // строки не уверен, работает со 100 и снижает кол-во шагов (сильно)
+				a = ps->head_a; //
+				ps->count_a = ps->count_a - (ps->tail_a->ind - ps->min_ind);//
+				tmp = a->next; //
+			}*/
+		if (ps->count_a <= 0)
+		{
+			ps->count_a = 0;
+			break ;
+		}
+		if (a->data > ps->mid && a->flag_b != -1)
 		{
 			rr_exec(ps, ps->head_a, ps->head_b, "ra");
 			ps->sum++;
+			count = 0;
 		}
-		// rr_exec(ps, ps->head_a, ps->head_b, "ra");
-		ps->sum++;
-	}
-	else if (b->next->data == ps->min)
-	{
-		s_exec(ps, ps->head_a, ps->head_b, "sb");
-		ps->head_b->flag_b = -1;
-		p_exec(ps, ps->head_a, ps->head_b, "pa");
-		if (ps->head_b->data < ps->head_b->next->data)
+		else if (a->flag_b != -1)
 		{
-			rr_exec(ps, ps->head_a, ps->head_b, "ra");
+			p_exec(ps, ps->head_a, ps->head_b, "pb");
 			ps->sum++;
 		}
-		//rr_exec(ps, ps->head_a, ps->head_b, "ra");
-		ps->sum += 2;
+		ps->count_a--;
+		a = tmp;
 	}
-	else if (ps->tail_b->data == ps->min)
-	{
-		rrr_exec(ps, ps->tail_a, ps->tail_b, "rrb");
-		ps->head_b->flag_b = -1;
-		p_exec(ps, ps->head_a, ps->head_b, "pa");
-		if (ps->head_b->data < ps->head_b->next->data)
-		{
-			rr_exec(ps, ps->head_a, ps->head_b, "ra");
-			ps->sum++;
-		}
-		//rr_exec(ps, ps->head_a, ps->head_b, "ra");
-		ps->sum += 2;
-	}
-	sort_b_two_el(ps, ps->head_a, ps->head_b, 1);
+	max_search(ps, ps->head_b);
 }
 
-void	sort_b_two_el(t_ps *ps, t_num *a, t_num *b, int k)
+void 	remaining_parts(t_ps *ps, t_num *a, t_num *tmp)
 {
-	if (ps->head_b->data > b->next->data)
+	while (a)
 	{
-		if (k == 0)
-		s_exec(ps, ps->head_a, ps->head_b, "sb");
-		else
-			rr_exec(ps, ps->head_a, ps->head_b, "rr");
-		ps->sum++;
+		tmp = a->next;
+		if (a->flag_b == ps->flag)
+		{
+			some_valid(ps); // эти 3 строки не уверен, работает со 100 и снижает кол-во шагов (сильно)
+			a = ps->head_a; //
+			tmp = a->next; //
+			if (a->flag_b == ps->flag)
+			{
+				if (ps->max < a->data)
+					ps->max = a->data;
+				p_exec(ps, ps->head_a, ps->head_b, "pb");
+				ps->sum++;
+			}
+		}
+		a = tmp;
 	}
-	ps->head_b->flag_b = -1;
-	p_exec(ps, ps->head_a, ps->head_b, "pa");
-	rr_exec(ps, ps->head_a, ps->head_b, "ra");
-	ps->head_b->flag_b = -1;
-	p_exec(ps, ps->head_a, ps->head_b, "pa");
-	rr_exec(ps, ps->head_a, ps->head_b, "ra");
-	ps->sum += 4;
-    ps->tail_b = NULL;
-	ps->count_b = 0;
+}
+
+void 	from_a_to_b(t_ps *ps, t_num *a, int k)
+{
+	t_num	*tmp;
+	int 	count;
+
+	a = ps->head_a;
+	if (ps->flag == 0)
+	{
+		/*ps->max = -2147483648;
+		ps->min = 2147483647;*/
+		count_search(ps, ps->head_a, 1);
+		count = 1;
+		min_search(ps, ps->head_a, 0);
+		max_search(ps, ps->head_a);
+		if (k == 0)
+			ps->mid = ps->max / 2 + ps->min;
+		else
+			ps->mid = (ps->max - ps->min) / 2 + ps->min;
+		new_part(ps, a, count, tmp);
+	/*	while (ps->count_a > 0)
+		{
+			tmp = a->next;
+		*//*	if (count == 1) // нужно ли вообще? нужно ли условие  k != 0
+			{
+				ps->min_ind = ps->tail_a->ind;//
+				some_valid(ps); // эти // строки не уверен, работает со 100 и снижает кол-во шагов (сильно)
+				a = ps->head_a; //
+				ps->count_a = ps->count_a - (ps->tail_a->ind - ps->min_ind);//
+				tmp = a->next; //
+			}*//*
+			if (ps->count_a <= 0)
+			{
+				ps->count_a = 0;
+				break ;
+			}
+			if (a->data > ps->mid && a->flag_b != -1)
+			{
+				rr_exec(ps, ps->head_a, ps->head_b, "ra");
+				ps->sum++;
+				count = 0;
+			}
+			else if (a->flag_b != -1)
+			{
+				p_exec(ps, ps->head_a, ps->head_b, "pb");
+				ps->sum++;
+			}
+			ps->count_a--;
+			a = tmp;
+		}*/
+		max_search(ps, ps->head_b);
+	}
+	else
+		remaining_parts(ps, a, tmp);
+	/*{
+		while (a)
+		{
+			tmp = a->next;
+			if (a->flag_b == ps->flag)
+			{
+				some_valid(ps); // эти 3 строки не уверен, работает со 100 и снижает кол-во шагов (сильно)
+				a = ps->head_a; //
+				tmp = a->next; //
+				if (a->flag_b == ps->flag)
+				{
+					if (ps->max < a->data)
+						ps->max = a->data;
+					p_exec(ps, ps->head_a, ps->head_b, "pb");
+					ps->sum++;
+				}
+			}
+			a = tmp;
+		}
+	}*/
 }

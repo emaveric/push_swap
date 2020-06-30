@@ -394,6 +394,9 @@
 		<Unit filename="/Users/emaveric/push_swap/src/search.c">
 			<Option target="push_swap"/>
 		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/sort.c">
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/Users/emaveric/push_swap/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
