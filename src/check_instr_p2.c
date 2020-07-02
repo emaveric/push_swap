@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-void 	s_exec_b(t_ps *ps, t_num *a, t_num *b, char *line)
+void 	s_exec_b(t_ps *ps, t_num *b)
 {
 	if (b->next)
 	{
@@ -44,10 +44,10 @@ void 	s_exec(t_ps *ps, t_num *a, t_num *b, char *line)
 		}
 	}
 	if (ft_strnequ(line, "sb", 3) || ft_strnequ(line, "ss", 3))
-		s_exec_b(ps, a, b, line);
+		s_exec_b(ps, b);
 }
 
-void	p_exec_b(t_ps *ps, t_num *a, t_num *b, char *line)
+void	p_exec_b(t_ps *ps, t_num *a, t_num *b)
 {
 	if (a)
 	{
@@ -81,5 +81,5 @@ void	p_exec(t_ps *ps, t_num *a, t_num *b, char *line)
 		}
 	}
 	else if (ft_strnequ(line, "pb", 3))
-		p_exec_b(ps, a, b, line);
+		p_exec_b(ps, a, b);
 }

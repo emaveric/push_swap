@@ -66,7 +66,7 @@ void	rrr_exec(t_ps *ps, t_num *a, t_num *b, char *line)
 	}
 }
 
-void	instr_execution(t_ps *ps, t_num *a, t_num *b, char *line)
+void	instr_execution(t_ps *ps, char *line)
 {
 	if (ft_strnequ(line, "s", 1))
 		s_exec(ps, ps->head_a, ps->head_b, line);

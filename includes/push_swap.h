@@ -15,7 +15,7 @@
 
 # include <stdio.h>
 # include <stdarg.h>
-# include "../libft/libft.h"
+# include "../ft_printf/libft/libft.h"
 # include "../ft_printf/includes/ft_printf.h"
 
 typedef struct			s_num
@@ -46,7 +46,7 @@ typedef struct			s_ps
 	int 				sum;
 }						t_ps;
 
-void	instr_execution(t_ps *ps, t_num *a, t_num *b, char *line);
+void	instr_execution(t_ps *ps, char *line);
 void 	s_exec(t_ps *ps, t_num *a, t_num *b, char *line);
 void	p_exec(t_ps *ps, t_num *a, t_num *b, char *line);
 int 	check_sort(t_ps *ps, t_num *a);
@@ -67,12 +67,15 @@ void	min_search(t_ps *ps, t_num *n, int k);
 void 	from_a_to_b(t_ps *ps, t_num *a, int k);
 void	sort_b(t_ps *ps, t_num *a, t_num *b, int k);
 void	some_valid(t_ps *ps);
-void	for_two_el_alg(t_ps *ps, t_num *a, t_num *b);
-void	for_three_el_alg(t_ps *ps, t_num *a, t_num *b, int k);
-void	for_four_el_alg(t_ps *ps, t_num *a, t_num *b, int k);
+void	for_two_el_alg(t_ps *ps, t_num *a);
+void	for_three_el_alg(t_ps *ps, t_num *a, int k);
+void	for_four_el_alg(t_ps *ps, t_num *a, int k);
 void	for_five_el_alg(t_ps *ps, t_num *a, t_num *b);
 void	max_search(t_ps *ps, t_num *n);
 void	count_search(t_ps *ps, t_num *n, int k);
+void 	remaining_parts(t_ps *ps, t_num *a, t_num *tmp);
+void	sort_b_main(t_ps *ps, t_num *b, int max_data);
+void	some_valid(t_ps *ps);
 /*void	sort_b_two_el(t_ps *ps, t_num *a, t_num *b, int k);
 void	sort_b_three_el(t_ps *ps, t_num *a, t_num *b);*/
 

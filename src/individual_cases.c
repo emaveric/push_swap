@@ -23,12 +23,12 @@ void	for_five_el_alg(t_ps *ps, t_num *a, t_num *b)
 	}
 	ps->min = ps->head_a->next->data;
 	p_exec(ps, ps->head_a, ps->head_b, "pb");
-	for_four_el_alg(ps, a, b, 0);
+	for_four_el_alg(ps, a, 0);
 	p_exec(ps, ps->head_a, ps->head_b, "pa");
 	ps->sum += 2;
 }
 
-void	for_four_el_alg(t_ps *ps, t_num *a, t_num *b, int k)
+void	for_four_el_alg(t_ps *ps, t_num *a, int k)
 {
 	a = ps->head_a;
 	min_search(ps, ps->head_a, k);
@@ -39,19 +39,19 @@ void	for_four_el_alg(t_ps *ps, t_num *a, t_num *b, int k)
 	}
 	ps->min = ps->head_a->next->data;
 	p_exec(ps, ps->head_a, ps->head_b, "pb");
-	for_three_el_alg(ps, a, b, 3);
+	for_three_el_alg(ps, a, 3);
 	p_exec(ps, ps->head_a, ps->head_b, "pa");
 	ps->sum += 2;
 }
 
-void	for_three_el_alg(t_ps *ps, t_num *a, t_num *b, int k)
+void	for_three_el_alg(t_ps *ps, t_num *a, int k)
 {
 	a = ps->head_a;
 	min_search(ps, ps->head_a, k);
 	if (ps->min == ps->head_a->data)
 	{
 		rr_exec(ps, ps->head_a, ps->head_b, "ra");
-		for_two_el_alg(ps, ps->head_a, b);
+		for_two_el_alg(ps, ps->head_a);
 		rrr_exec(ps, ps->tail_a, ps->tail_b, "rra");
 		ps->sum += 2;
 	}
@@ -79,7 +79,7 @@ void	for_three_el_alg(t_ps *ps, t_num *a, t_num *b, int k)
 	}
 }
 
-void	for_two_el_alg(t_ps *ps, t_num *a, t_num *b)
+void	for_two_el_alg(t_ps *ps, t_num *a)
 {
 	a = ps->head_a;
 	if (a->data > a->next->data)

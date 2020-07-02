@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-void	print_stacks(t_ps **ps)
+void	stacks_print(t_ps **ps)
 {
 	t_num *tmp_a;
 	t_num *tmp_b;
@@ -40,10 +40,10 @@ void	print_stacks(t_ps **ps)
 	}
 }
 
-void	print_stacks_help(t_ps **ps)
+void	stacks_print_help(t_ps **ps)
 {
 	write(1, "\033[0d\033[2J", 8);
-	print_stacks(ps);
+	stacks_print(ps);
 	ft_printf("-----------------------------\n");
 	ft_printf("%13s | %7s\n", "stack A", "stack B");
 	ft_printf("-----------------------------\n");
@@ -54,6 +54,6 @@ void	output_stacks(t_ps **ps)
 	if ((*ps)->flag_v == 1)
 	{
 		usleep(100500);
-		print_stacks_help(ps);
+		stacks_print_help(ps);
 	}
 }

@@ -12,6 +12,37 @@
 
 #include "../includes/push_swap.h"
 
+void	some_valid(t_ps *ps)
+{
+	while (ps->head_a->ind - ps->tail_a->ind == 1 ||
+		   ps->head_a->ind - ps->head_a->next->ind == 1)
+	{ /*||
+			(ps->head_b == NULL && ps->tail_b == NULL && ps->head_a->next->next->ind - ps->tail_a->ind == 1))
+	{
+		if (ps->head_b == NULL && ps->tail_b == NULL && ps->head_a->next->next->ind - ps->tail_a->ind == 1)
+		{
+			p_exec(ps, ps->head_a, ps->head_b, "pb");
+			s_exec(ps, ps->head_a, ps->head_b, "sa");
+			rr_exec(ps, ps->head_a, ps->head_b, "ra");
+			p_exec(ps, ps->head_a, ps->head_b, "pa");
+			ps->sum += 4;
+		}
+		else */if (ps->head_a->ind - ps->head_a->next->ind == 1)
+		{
+			s_exec(ps, ps->head_a, ps->head_b, "sa");
+			ps->sum++;
+		}
+		else
+		{
+			ps->head_a->flag_b = -1;
+			rr_exec(ps, ps->head_a, ps->head_b, "ra");
+			//if (ps->head_a->flag_b != ps->flag) // тест на ошибку при 500 с лишними флагами
+			//    ps->flag--;
+			ps->sum++;
+		}
+	}
+}
+
 void	new_part(t_ps *ps, t_num *a, int count, t_num *tmp)
 {
 	while (ps->count_a > 0)
@@ -75,6 +106,7 @@ void 	from_a_to_b(t_ps *ps, t_num *a, int k)
 	int 	count;
 
 	a = ps->head_a;
+	tmp = NULL;
 	if (ps->flag == 0)
 	{
 		/*ps->max = -2147483648;

@@ -6,5 +6,5 @@ C_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacO
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/emaveric/push_swap/. -I/Users/emaveric/push_swap/includes -I/Users/emaveric/push_swap/libft -I/Users/emaveric/push_swap/src 
+C_INCLUDES = -I/Users/emaveric/push_swap/ft_printf/includes -I/Users/emaveric/push_swap/ft_printf/libft -I/Users/emaveric/push_swap/includes 
 

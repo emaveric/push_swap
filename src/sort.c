@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-void	sort_b_two_el(t_ps *ps, t_num *a, t_num *b, int k)
+void	sort_b_two_el(t_ps *ps, t_num *b, int k)
 {
 	if (ps->head_b->data > b->next->data)
 	{
@@ -33,7 +33,7 @@ void	sort_b_two_el(t_ps *ps, t_num *a, t_num *b, int k)
 	ps->count_b = 0;
 }
 
-void	sort_b_three_el_p2(t_ps *ps, t_num *a, t_num *b)
+void	sort_b_three_el_p2(t_ps *ps, t_num *b)
 {
 	if (b->next->data == ps->min)
 	{
@@ -63,7 +63,7 @@ void	sort_b_three_el_p2(t_ps *ps, t_num *a, t_num *b)
 	}
 }
 
-void	sort_b_three_el(t_ps *ps, t_num *a, t_num *b)
+void	sort_b_three_el(t_ps *ps, t_num *b)
 {
 	if (ps->head_b->data == ps->min)
 	{
@@ -78,11 +78,11 @@ void	sort_b_three_el(t_ps *ps, t_num *a, t_num *b)
 		ps->sum++;
 	}
 	else
-		sort_b_three_el_p2(ps, a, b);
-	sort_b_two_el(ps, ps->head_a, ps->head_b, 1);
+		sort_b_three_el_p2(ps, b);
+	sort_b_two_el(ps, ps->head_b, 1);
 }
 
-void	sort_b_main(t_ps *ps, t_num *a, t_num *b, int max_data)
+void	sort_b_main(t_ps *ps, t_num *b, int max_data)
 {
 	/*//tmp = b->next;
 	if (b->data > ps->mid && b->ind != ps->min_ind)
@@ -170,7 +170,6 @@ void	sort_b_main(t_ps *ps, t_num *a, t_num *b, int max_data)
 
 void	sort_b(t_ps *ps, t_num *a, t_num *b, int k)
 {
-	t_num	*tmp;
 	int 	max_data;
 
 	//ps->min = 2147483647;
@@ -183,15 +182,15 @@ void	sort_b(t_ps *ps, t_num *a, t_num *b, int k)
 	b = ps->head_b;
 	if (ps->count_b == 2)
 	{
-		sort_b_two_el(ps, a, b, 0);
+		sort_b_two_el(ps, b, 0);
 		return ;
 	}
 	if (ps->count_b == 3)
 	{
-		sort_b_three_el(ps, a, b);
+		sort_b_three_el(ps, b);
 		return ;
 	}
-	sort_b_main(ps, a, b, max_data);
+	sort_b_main(ps, b, max_data);
 	/*while (ps->count_b > 0)
 	{
 		//tmp = b->next;
