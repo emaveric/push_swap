@@ -95,6 +95,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/emaveric/push_swap/libft/ulltoa_base.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/ulltoa_base.c.o"
   "/Users/emaveric/push_swap/src/check_all.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/check_all.c.o"
   "/Users/emaveric/push_swap/src/check_instr.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/check_instr.c.o"
+  "/Users/emaveric/push_swap/src/check_instr_p2.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/check_instr_p2.c.o"
+  "/Users/emaveric/push_swap/src/check_num.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/check_num.c.o"
   "/Users/emaveric/push_swap/src/check_valid.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/check_valid.c.o"
   "/Users/emaveric/push_swap/src/checker.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/checker.c.o"
   "/Users/emaveric/push_swap/src/free.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/free.c.o"
@@ -103,6 +105,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/emaveric/push_swap/src/push_swap.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/push_swap.c.o"
   "/Users/emaveric/push_swap/src/search.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/search.c.o"
   "/Users/emaveric/push_swap/src/sort.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/sort.c.o"
+  "/Users/emaveric/push_swap/src/stacks_print.c" "/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/stacks_print.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

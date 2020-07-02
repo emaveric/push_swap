@@ -275,6 +275,14 @@ CMakeFiles/push_swap.dir/src/check_instr.c.o
  /Users/emaveric/push_swap/includes/push_swap.h
  /Users/emaveric/push_swap/libft/libft.h
  /Users/emaveric/push_swap/src/check_instr.c
+CMakeFiles/push_swap.dir/src/check_instr_p2.c.o
+ /Users/emaveric/push_swap/includes/push_swap.h
+ /Users/emaveric/push_swap/libft/libft.h
+ /Users/emaveric/push_swap/src/check_instr_p2.c
+CMakeFiles/push_swap.dir/src/check_num.c.o
+ /Users/emaveric/push_swap/includes/push_swap.h
+ /Users/emaveric/push_swap/libft/libft.h
+ /Users/emaveric/push_swap/src/check_num.c
 CMakeFiles/push_swap.dir/src/check_valid.c.o
  /Users/emaveric/push_swap/includes/push_swap.h
  /Users/emaveric/push_swap/libft/libft.h

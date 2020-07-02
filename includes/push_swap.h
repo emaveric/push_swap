@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stdarg.h>
 # include "../libft/libft.h"
+# include "../ft_printf/includes/ft_printf.h"
 
 typedef struct			s_num
 {
@@ -34,6 +35,7 @@ typedef struct			s_ps
 	struct s_num		*head_b;
 	struct s_num		*tail_b;
 	int 				flag;
+	int					flag_v;
 	int 				max;
 	int					mid;
 	int 				min;
@@ -45,6 +47,8 @@ typedef struct			s_ps
 }						t_ps;
 
 void	instr_execution(t_ps *ps, t_num *a, t_num *b, char *line);
+void 	s_exec(t_ps *ps, t_num *a, t_num *b, char *line);
+void	p_exec(t_ps *ps, t_num *a, t_num *b, char *line);
 int 	check_sort(t_ps *ps, t_num *a);
 int 	check_rep_value(t_num *a, int data, int ind);
 int 	check_start_sort(t_ps *ps, t_num *a);
@@ -54,6 +58,7 @@ int		check_num(t_ps *ps, t_num *a, char **av);
 t_num	*init_num(void);
 t_ps	*init_ps(void);
 void	free_t_num(t_num *tmp);
+void	output_stacks(t_ps **ps);
 void 	s_exec(t_ps *ps, t_num *a, t_num *b, char *line);
 void	p_exec(t_ps *ps, t_num *a, t_num *b, char *line);
 void	rr_exec(t_ps *ps, t_num *a, t_num *b, char *line);

@@ -373,6 +373,12 @@
 		<Unit filename="/Users/emaveric/push_swap/src/check_instr.c">
 			<Option target="push_swap"/>
 		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/check_instr_p2.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/check_num.c">
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/Users/emaveric/push_swap/src/check_valid.c">
 			<Option target="push_swap"/>
 		</Unit>
@@ -395,6 +401,9 @@
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/emaveric/push_swap/src/sort.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/stacks_print.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/emaveric/push_swap/CMakeLists.txt">

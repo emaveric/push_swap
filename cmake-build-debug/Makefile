@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001bzc000_zv/T/AppTranslocation/80BDBEFB-B0D2-4BB1-BC16-BB9019B1BC4F/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001bzc000_zv/T/AppTranslocation/E3A7096B-07F3-4F65-80DC-48728C70417C/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001bzc000_zv/T/AppTranslocation/80BDBEFB-B0D2-4BB1-BC16-BB9019B1BC4F/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001bzc000_zv/T/AppTranslocation/E3A7096B-07F3-4F65-80DC-48728C70417C/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/emaveric/push_swap/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001bzc000_zv/T/AppTranslocation/80BDBEFB-B0D2-4BB1-BC16-BB9019B1BC4F/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001bzc000_zv/T/AppTranslocation/E3A7096B-07F3-4F65-80DC-48728C70417C/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001bzc000_zv/T/AppTranslocation/80BDBEFB-B0D2-4BB1-BC16-BB9019B1BC4F/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/private/var/folders/zz/zyxvpxvq6csfxvn_n0001bzc000_zv/T/AppTranslocation/E3A7096B-07F3-4F65-80DC-48728C70417C/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -2580,6 +2580,60 @@ src/check_instr.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_instr.c.s
 .PHONY : src/check_instr.c.s
 
+src/check_instr_p2.o: src/check_instr_p2.c.o
+
+.PHONY : src/check_instr_p2.o
+
+# target to build an object file
+src/check_instr_p2.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_instr_p2.c.o
+.PHONY : src/check_instr_p2.c.o
+
+src/check_instr_p2.i: src/check_instr_p2.c.i
+
+.PHONY : src/check_instr_p2.i
+
+# target to preprocess a source file
+src/check_instr_p2.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_instr_p2.c.i
+.PHONY : src/check_instr_p2.c.i
+
+src/check_instr_p2.s: src/check_instr_p2.c.s
+
+.PHONY : src/check_instr_p2.s
+
+# target to generate assembly for a file
+src/check_instr_p2.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_instr_p2.c.s
+.PHONY : src/check_instr_p2.c.s
+
+src/check_num.o: src/check_num.c.o
+
+.PHONY : src/check_num.o
+
+# target to build an object file
+src/check_num.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_num.c.o
+.PHONY : src/check_num.c.o
+
+src/check_num.i: src/check_num.c.i
+
+.PHONY : src/check_num.i
+
+# target to preprocess a source file
+src/check_num.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_num.c.i
+.PHONY : src/check_num.c.i
+
+src/check_num.s: src/check_num.c.s
+
+.PHONY : src/check_num.s
+
+# target to generate assembly for a file
+src/check_num.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/check_num.c.s
+.PHONY : src/check_num.c.s
+
 src/check_valid.o: src/check_valid.c.o
 
 .PHONY : src/check_valid.o
@@ -2795,6 +2849,33 @@ src/sort.s: src/sort.c.s
 src/sort.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/sort.c.s
 .PHONY : src/sort.c.s
+
+src/stacks_print.o: src/stacks_print.c.o
+
+.PHONY : src/stacks_print.o
+
+# target to build an object file
+src/stacks_print.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/stacks_print.c.o
+.PHONY : src/stacks_print.c.o
+
+src/stacks_print.i: src/stacks_print.c.i
+
+.PHONY : src/stacks_print.i
+
+# target to preprocess a source file
+src/stacks_print.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/stacks_print.c.i
+.PHONY : src/stacks_print.c.i
+
+src/stacks_print.s: src/stacks_print.c.s
+
+.PHONY : src/stacks_print.s
+
+# target to generate assembly for a file
+src/stacks_print.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/stacks_print.c.s
+.PHONY : src/stacks_print.c.s
 
 # Help Target
 help:
@@ -3078,6 +3159,12 @@ help:
 	@echo "... src/check_instr.o"
 	@echo "... src/check_instr.i"
 	@echo "... src/check_instr.s"
+	@echo "... src/check_instr_p2.o"
+	@echo "... src/check_instr_p2.i"
+	@echo "... src/check_instr_p2.s"
+	@echo "... src/check_num.o"
+	@echo "... src/check_num.i"
+	@echo "... src/check_num.s"
 	@echo "... src/check_valid.o"
 	@echo "... src/check_valid.i"
 	@echo "... src/check_valid.s"
@@ -3102,6 +3189,9 @@ help:
 	@echo "... src/sort.o"
 	@echo "... src/sort.i"
 	@echo "... src/sort.s"
+	@echo "... src/stacks_print.o"
+	@echo "... src/stacks_print.i"
+	@echo "... src/stacks_print.s"
 .PHONY : help
 
 

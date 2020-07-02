@@ -34,10 +34,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001bzc000_zv/T/AppTranslocation/80BDBEFB-B0D2-4BB1-BC16-BB9019B1BC4F/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001bzc000_zv/T/AppTranslocation/E3A7096B-07F3-4F65-80DC-48728C70417C/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001bzc000_zv/T/AppTranslocation/80BDBEFB-B0D2-4BB1-BC16-BB9019B1BC4F/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /private/var/folders/zz/zyxvpxvq6csfxvn_n0001bzc000_zv/T/AppTranslocation/E3A7096B-07F3-4F65-80DC-48728C70417C/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -1344,6 +1344,45 @@ CMakeFiles/push_swap.dir/src/sort.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/push_swap.dir/src/sort.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/emaveric/push_swap/src/sort.c -o CMakeFiles/push_swap.dir/src/sort.c.s
 
+CMakeFiles/push_swap.dir/src/check_num.c.o: CMakeFiles/push_swap.dir/flags.make
+CMakeFiles/push_swap.dir/src/check_num.c.o: ../src/check_num.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/push_swap.dir/src/check_num.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/push_swap.dir/src/check_num.c.o   -c /Users/emaveric/push_swap/src/check_num.c
+
+CMakeFiles/push_swap.dir/src/check_num.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/push_swap.dir/src/check_num.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/emaveric/push_swap/src/check_num.c > CMakeFiles/push_swap.dir/src/check_num.c.i
+
+CMakeFiles/push_swap.dir/src/check_num.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/push_swap.dir/src/check_num.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/emaveric/push_swap/src/check_num.c -o CMakeFiles/push_swap.dir/src/check_num.c.s
+
+CMakeFiles/push_swap.dir/src/check_instr_p2.c.o: CMakeFiles/push_swap.dir/flags.make
+CMakeFiles/push_swap.dir/src/check_instr_p2.c.o: ../src/check_instr_p2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/push_swap.dir/src/check_instr_p2.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/push_swap.dir/src/check_instr_p2.c.o   -c /Users/emaveric/push_swap/src/check_instr_p2.c
+
+CMakeFiles/push_swap.dir/src/check_instr_p2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/push_swap.dir/src/check_instr_p2.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/emaveric/push_swap/src/check_instr_p2.c > CMakeFiles/push_swap.dir/src/check_instr_p2.c.i
+
+CMakeFiles/push_swap.dir/src/check_instr_p2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/push_swap.dir/src/check_instr_p2.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/emaveric/push_swap/src/check_instr_p2.c -o CMakeFiles/push_swap.dir/src/check_instr_p2.c.s
+
+CMakeFiles/push_swap.dir/src/stacks_print.c.o: CMakeFiles/push_swap.dir/flags.make
+CMakeFiles/push_swap.dir/src/stacks_print.c.o: ../src/stacks_print.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/push_swap.dir/src/stacks_print.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/push_swap.dir/src/stacks_print.c.o   -c /Users/emaveric/push_swap/src/stacks_print.c
+
+CMakeFiles/push_swap.dir/src/stacks_print.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/push_swap.dir/src/stacks_print.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/emaveric/push_swap/src/stacks_print.c > CMakeFiles/push_swap.dir/src/stacks_print.c.i
+
+CMakeFiles/push_swap.dir/src/stacks_print.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/push_swap.dir/src/stacks_print.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/emaveric/push_swap/src/stacks_print.c -o CMakeFiles/push_swap.dir/src/stacks_print.c.s
+
 # Object files for target push_swap
 push_swap_OBJECTS = \
 "CMakeFiles/push_swap.dir/libft/ft_atoi.c.o" \
@@ -1444,7 +1483,10 @@ push_swap_OBJECTS = \
 "CMakeFiles/push_swap.dir/src/main_alg.c.o" \
 "CMakeFiles/push_swap.dir/src/check_valid.c.o" \
 "CMakeFiles/push_swap.dir/libft/ft_atoi_int_max.c.o" \
-"CMakeFiles/push_swap.dir/src/sort.c.o"
+"CMakeFiles/push_swap.dir/src/sort.c.o" \
+"CMakeFiles/push_swap.dir/src/check_num.c.o" \
+"CMakeFiles/push_swap.dir/src/check_instr_p2.c.o" \
+"CMakeFiles/push_swap.dir/src/stacks_print.c.o"
 
 # External object files for target push_swap
 push_swap_EXTERNAL_OBJECTS =
@@ -1548,9 +1590,12 @@ push_swap: CMakeFiles/push_swap.dir/src/main_alg.c.o
 push_swap: CMakeFiles/push_swap.dir/src/check_valid.c.o
 push_swap: CMakeFiles/push_swap.dir/libft/ft_atoi_int_max.c.o
 push_swap: CMakeFiles/push_swap.dir/src/sort.c.o
+push_swap: CMakeFiles/push_swap.dir/src/check_num.c.o
+push_swap: CMakeFiles/push_swap.dir/src/check_instr_p2.c.o
+push_swap: CMakeFiles/push_swap.dir/src/stacks_print.c.o
 push_swap: CMakeFiles/push_swap.dir/build.make
 push_swap: CMakeFiles/push_swap.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Linking C executable push_swap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/emaveric/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Linking C executable push_swap"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/push_swap.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

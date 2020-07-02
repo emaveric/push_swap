@@ -56,6 +56,8 @@ int		read_instr(t_ps *ps, t_num *a, t_num *b)
 {
 	char	*line;
 
+	if (ps->flag_v == 1)
+		output_stacks(&ps)
 	while (get_next_line(0, &line))
 	{
 		if (!(check_valid_instr(line)))
@@ -70,7 +72,17 @@ int		read_instr(t_ps *ps, t_num *a, t_num *b)
 	return (0);
 }
 
-/*
+int		is_flag(int *ac, char **av, t_ps **ps)
+{
+	if (!ft_strcmp("-v", *(av + 1)))
+	{
+		(*ps)->flag_v = 1;
+		*ac -= 1;
+		return (1);
+	}
+	return (0);
+}
+
 int 	main(int ac, char **av)
 {
 	t_num	*a;
@@ -85,6 +97,8 @@ int 	main(int ac, char **av)
 			return (-1);
 		if (!(b = init_num()))
 			return (-1);
+		if (is_flag(&ac, av, &ps))
+			av += 1;
 		if (check_num(ps, a, av) == -1)
 			return (0);
 		check_ind(ps, a);
@@ -109,4 +123,4 @@ int 	main(int ac, char **av)
 		a = a->next;
 	}
 	return (0);
-}*/
+}

@@ -275,6 +275,14 @@ CMakeFiles/push_swap.dir/src/check_instr.c.o: ../includes/push_swap.h
 CMakeFiles/push_swap.dir/src/check_instr.c.o: ../libft/libft.h
 CMakeFiles/push_swap.dir/src/check_instr.c.o: ../src/check_instr.c
 
+CMakeFiles/push_swap.dir/src/check_instr_p2.c.o: ../includes/push_swap.h
+CMakeFiles/push_swap.dir/src/check_instr_p2.c.o: ../libft/libft.h
+CMakeFiles/push_swap.dir/src/check_instr_p2.c.o: ../src/check_instr_p2.c
+
+CMakeFiles/push_swap.dir/src/check_num.c.o: ../includes/push_swap.h
+CMakeFiles/push_swap.dir/src/check_num.c.o: ../libft/libft.h
+CMakeFiles/push_swap.dir/src/check_num.c.o: ../src/check_num.c
+
 CMakeFiles/push_swap.dir/src/check_valid.c.o: ../includes/push_swap.h
 CMakeFiles/push_swap.dir/src/check_valid.c.o: ../libft/libft.h
 CMakeFiles/push_swap.dir/src/check_valid.c.o: ../src/check_valid.c
