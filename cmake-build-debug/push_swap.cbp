@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="push_swap"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/emaveric/push_swap/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/emaveric/push_swap/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/emaveric/push_swap/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="push_swap">
+				<Option output="/Users/emaveric/push_swap/cmake-build-debug/push_swap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/emaveric/push_swap/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/emaveric/push_swap/ft_printf/includes"/>
+					<Add directory="/Users/emaveric/push_swap/ft_printf/libft"/>
+					<Add directory="/Users/emaveric/push_swap/includes"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 push_swap"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="push_swap/fast">
+				<Option output="/Users/emaveric/push_swap/cmake-build-debug/push_swap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/emaveric/push_swap/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/emaveric/push_swap/ft_printf/includes"/>
+					<Add directory="/Users/emaveric/push_swap/ft_printf/libft"/>
+					<Add directory="/Users/emaveric/push_swap/includes"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 push_swap/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/emaveric/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/emaveric/push_swap/Makefile">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/author">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/Makefile">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/author">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/includes/ft_printf.h">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_atoi.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_atoi_base.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_atoi_int_max.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_bzero.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_clear_table.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_countwords.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_div_mod.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_free.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_is_minus_inf.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_is_whitespaces.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_isalnum.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_isalpha.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_isascii.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_isdigit.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_isinf.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_isnan.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_isprint.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_itoa.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_lltoa.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_llutoa.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_lstadd.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_lstdel.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_lstdelone.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_lstiter.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_lstmap.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_lstnew.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_memalloc.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_memccpy.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_memchr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_memcmp.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_memcpy.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_memdel.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_memmove.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_memset.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_num_to_str.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_numlen.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_pow.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_pow_double.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_putchar.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_putchar_fd.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_putendl.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_putendl_fd.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_putnbr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_putnbr_fd.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_putnbr_max.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_putstr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_putstr_fd.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_recursive_factorial.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_sqrt.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strcat.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strchr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strclr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strcmp.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strcmp_free.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strcpy.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strcut.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strdel.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strdup.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strequ.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_striter.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_striteri.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strjoin.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strjoin_free.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strlcat.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strlen.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strmap.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strmapi.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strncat.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strncmp.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strncpy.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strncut.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strnequ.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strnew.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strnstr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strrchr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strsplit.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strstr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strsub.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_strtrim.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_swap.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_tolower.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_toupper.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ft_ulltoa.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/get_next_line.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/itoa_base.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/libft.h">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/number_len_ll.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/number_len_ull.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/to_uppercase.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/libft/ulltoa_base.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/src/check_is.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/src/fill_final.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/src/fill_find_other.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/src/fill_new_str.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/src/find_mod.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/src/find_str_size.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/src/float_maker.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/src/float_new_free.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/src/float_put.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/src/floats.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/src/ft_printf.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/src/parse_format.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/src/pf_format.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/src/pf_free.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/src/pf_libft.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/ft_printf/src/print_check.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/includes/push_swap.h">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/check_all.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/check_instr.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/check_instr_p2.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/check_num.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/check_valid.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/checker.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/free.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/individual_cases.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/init.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/main_alg.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/push_swap.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/search.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/sort.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/src/stacks_print.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/emaveric/push_swap/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
