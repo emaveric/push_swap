@@ -40,6 +40,10 @@ stdarg.h
 ../ft_printf/includes/ft_printf.h
 /Users/emaveric/push_swap/ft_printf/includes/ft_printf.h
 
+/Users/emaveric/push_swap/src/checker.c
+../includes/push_swap.h
+/Users/emaveric/push_swap/includes/push_swap.h
+
 /Users/emaveric/push_swap/src/push_swap.c
 ../includes/push_swap.h
 /Users/emaveric/push_swap/includes/push_swap.h

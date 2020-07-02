@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-char 	**check_atoi(t_ps *ps, t_num *a, char **av, int minus)
+char	**check_atoi(t_ps *ps, t_num *a, char **av, int minus)
 {
 	t_num	*tmp;
 
@@ -23,14 +23,13 @@ char 	**check_atoi(t_ps *ps, t_num *a, char **av, int minus)
 	if (minus == 1)
 		a->data *= -1;
 	minus = 0;
-	if (a->next == NULL && a->prev == NULL)//ps->head_a == NULL)
+	if (a->next == NULL && a->prev == NULL)
 		ps->head_a = a;
 	a->ind = -1;
 	if (*(av + 1))
 	{
 		if (!(a->next = init_num()))
 			return (NULL);
-		//printf("data %d ind %d\n", a->data, a->ind);
 		a = a->next;
 		tmp->next = a;
 		a->prev = tmp;
@@ -62,10 +61,7 @@ char	**check_num_main(t_ps *ps, t_num *a, char **av, int minus)
 		else if (**av == ' ' && minus == 0)
 			*av += 1;
 		else
-			/*	{
-					printf("Error\n");*/
 			return (NULL);
-		//	}
 		while (*av && **av && **av == ' ')
 			*av += 1;
 	}
@@ -76,7 +72,7 @@ char	**check_num_main(t_ps *ps, t_num *a, char **av, int minus)
 
 int		check_num(t_ps *ps, t_num *a, char **av)
 {
-	int 	minus;
+	int		minus;
 
 	av += 1;
 	minus = 0;

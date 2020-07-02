@@ -20,18 +20,24 @@ int		read_instr(t_ps *ps)
 		output_stacks(&ps);
 	while (get_next_line(0, &line))
 	{
-		if (!(check_valid_instr(line)))
+		if (*line == '\0')
 		{
 			free(line);
 			break ;
 		}
+		if (check_valid_instr(line) == 0)
+		{
+			if (line)
+				free(line);
+			line = NULL;
+			return (0);
+		}
 		instr_execution(ps, line, 1);
-		free(line);
+		if (line)
+			free(line);
+		line = NULL;
 	}
-	if (line)
-		free(line);
-	line = NULL;
-	return (0);
+	return (1);
 }
 
 int		is_flag(int *ac, char **av, t_ps **ps)
@@ -45,14 +51,14 @@ int		is_flag(int *ac, char **av, t_ps **ps)
 	return (0);
 }
 
-int 	main(int ac, char **av)
+int		main(int ac, char **av)
 {
 	t_num	*a;
 	t_ps	*ps;
 
 	if (init_new(&a, &ps) == -1)
 		return (0);
-	if (ac < 2 && *av[1] == '\0')
+	if (ac < 2 || *av[1] == '\0')
 	{
 		free_t_ps(&ps, &a);
 		return (0);
@@ -65,23 +71,11 @@ int 	main(int ac, char **av)
 			return (0);
 		if (check_ind(ps, a) == -1)
 			return (0);
-		read_instr(ps);
-		check_sort(ps, a);
+		if (read_instr(ps) == 0)
+			write(2, "Error\n", 6);
+		else
+			check_sort(ps, a);
 	}
 	free_t_ps(&ps, &a);
 	exit(0);
 }
-
-/*
-a = ps->head_a;
-while (a != NULL)
-{
-printf("data %d ind %d\n", a->data, a->ind);
-a = a->next;
-}
-*/
-
-/*a = ps->head_a;
-		free_t_num(a);
-		free_t_num(ps->head_b);
-		free(ps);*/

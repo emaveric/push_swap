@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-void 	scrolling(t_ps *ps, int k)
+void	scrolling(t_ps *ps, int k)
 {
 	while (ps->tail_a->flag_b != -1 && k != 0)
 	{
@@ -21,7 +21,6 @@ void 	scrolling(t_ps *ps, int k)
 		else
 			rrr_exec(ps, "rra", 0);
 		ps->kol++;
-		ps->sum++;
 	}
 }
 
@@ -40,7 +39,7 @@ void	more_than_five_alg(t_ps *ps, t_num *a, t_num *b, int k)
 		if (ps->head_b)
 			sort_b(ps, a, b, 1);
 		if (ps->flag > ps->head_a->flag_b)
-		    ps->flag--;
+			ps->flag--;
 	}
 	some_valid(ps);
 	if (ps->kol > 0)
@@ -50,7 +49,7 @@ void	more_than_five_alg(t_ps *ps, t_num *a, t_num *b, int k)
 	}
 }
 
-int 	start_alg(int ac, t_ps *ps, t_num *a, t_num *b)
+void	start_alg(int ac, t_ps *ps, t_num *a, t_num *b)
 {
 	if (ac > 6)
 		more_than_five_alg(ps, a, b, 0);
@@ -62,10 +61,9 @@ int 	start_alg(int ac, t_ps *ps, t_num *a, t_num *b)
 		for_three_el_alg(ps, a, 0);
 	if (ac == 3)
 		for_two_el_alg(ps, a);
-	return (0);
 }
 
-int 	main(int ac, char **av)
+int		main(int ac, char **av)
 {
 	t_num	*a;
 	t_ps	*ps;
@@ -88,7 +86,6 @@ int 	main(int ac, char **av)
 			return (0);
 		start_alg(ac, ps, a, ps->head_b);
 	}
-	check_sort(ps, ps->head_a); // нужно ли?
 	free_t_ps(&ps, &a);
-	return (0);
+	exit(0);
 }

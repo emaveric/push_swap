@@ -32,7 +32,7 @@ t_ps	*init_ps(void)
 
 	if (!(new = (t_ps *)malloc(sizeof(t_ps))))
 		return (NULL);
-	new->head_a = NULL; // почему было закоменчено?
+	new->head_a = NULL;
 	new->head_b = NULL;
 	new->tail_a = NULL;
 	new->tail_b = NULL;
@@ -42,15 +42,13 @@ t_ps	*init_ps(void)
 	new->mid = 0;
 	new->min = 0;
 	new->kol = 1;
-	new->sum = 0;
 	new->min_ind = -1;
 	new->count_a = 0;
 	new->count_b = 0;
-	//new->head_a = init_num();
 	return (new);
 }
 
-int			init_new(t_num **a, t_ps **ps)
+int		init_new(t_num **a, t_ps **ps)
 {
 	if (!(*a = init_num()))
 	{

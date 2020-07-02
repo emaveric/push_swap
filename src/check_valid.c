@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-int 	check_start_sort(t_ps *ps, t_num *a)
+int		check_start_sort(t_ps *ps, t_num *a)
 {
 	int		ind;
 
@@ -23,12 +23,13 @@ int 	check_start_sort(t_ps *ps, t_num *a)
 		if (ind != a->ind)
 			return (0);
 		ind++;
-		a= a->next;
+		a = a->next;
 	}
+	free_t_ps(&ps, &a);
 	return (1);
 }
 
-int 	check_valid_instr(char *line)
+int		check_valid_instr(char *line)
 {
 	if (ft_strnequ(line, "sa", 3))
 		return (1);
@@ -57,7 +58,7 @@ int 	check_valid_instr(char *line)
 	return (0);
 }
 
-int 	check_rep_value(t_num *a, int data, int ind)
+int		check_rep_value(t_num *a, int data, int ind)
 {
 	while (a->next)
 	{

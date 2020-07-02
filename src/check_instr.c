@@ -52,7 +52,7 @@ void	rr_exec(t_ps *ps, char *line, int k)
 		ft_printf("rr\n");
 }
 
-void	rrr_exec_b(t_ps *ps, t_num *b)
+void	rrr_exec_b(t_ps *ps, t_num *b, char *line, int k)
 {
 	ps->tail_b = b->prev;
 	ps->head_b->prev = b;
@@ -62,6 +62,8 @@ void	rrr_exec_b(t_ps *ps, t_num *b)
 	b->prev = NULL;
 	if (ps->tail_b)
 		ps->tail_b->next = NULL;
+	if (ft_strcmp(line, "rrb") == 0 && k != 1)
+		ft_printf("rrb\n");
 }
 
 void	rrr_exec(t_ps *ps, char *line, int k)
@@ -85,11 +87,9 @@ void	rrr_exec(t_ps *ps, char *line, int k)
 	}
 	if ((ft_strnequ(line, "rrb", 4) || ft_strnequ(line, "rrr", 4))
 		&& b && b->prev)
-		rrr_exec_b(ps, b);
+		rrr_exec_b(ps, b, line, k);
 	if (ft_strcmp(line, "rra") == 0 && k != 1)
 		ft_printf("rra\n");
-	else if (ft_strcmp(line, "rrb") == 0 && k != 1)
-		ft_printf("rrb\n");
 	else if (ft_strcmp(line, "rrr") == 0 && k != 1)
 		ft_printf("rrr\n");
 }
@@ -102,7 +102,7 @@ void	instr_execution(t_ps *ps, char *line, int k)
 		p_exec(ps, line, k);
 	else if (ft_strnequ(line, "r", 1) && ft_strlen(line) == 2)
 		rr_exec(ps, line, k);
-	else
+	else if (ft_strnequ(line, "rr", 2) && ft_strlen(line) == 2)
 		rrr_exec(ps, line, k);
 	if (ps->flag_v == 1)
 		output_stacks(&ps);

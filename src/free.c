@@ -51,7 +51,6 @@ void	free_t_ps(t_ps **ps, t_num **a)
 	(*ps)->kol = 0;
 	(*ps)->count_a = 0;
 	(*ps)->count_b = 0;
-	(*ps)->sum = 0;
 	free(*ps);
 	*ps = NULL;
 }

@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-void 	s_exec_b(t_ps *ps, t_num *b)
+void	s_exec_b(t_ps *ps, t_num *b)
 {
 	if (b->next)
 	{
@@ -27,7 +27,7 @@ void 	s_exec_b(t_ps *ps, t_num *b)
 	}
 }
 
-void 	s_exec(t_ps *ps, char *line, int k)
+void	s_exec(t_ps *ps, char *line, int k)
 {
 	t_num	*a;
 	t_num	*b;
@@ -56,7 +56,7 @@ void 	s_exec(t_ps *ps, char *line, int k)
 		ft_printf("sb\n");
 }
 
-void	p_exec_b(t_ps *ps, t_num *a, t_num *b)
+void	p_exec_b(t_ps *ps, t_num *a, t_num *b, int k)
 {
 	if (a)
 	{
@@ -70,6 +70,8 @@ void	p_exec_b(t_ps *ps, t_num *a, t_num *b)
 		if (ps->head_a)
 			ps->head_a->prev = NULL;
 	}
+	if (k != 1)
+		ft_printf("pb\n");
 }
 
 void	p_exec(t_ps *ps, char *line, int k)
@@ -95,9 +97,7 @@ void	p_exec(t_ps *ps, char *line, int k)
 		}
 	}
 	else if (ft_strnequ(line, "pb", 3))
-		p_exec_b(ps, a, b);
+		p_exec_b(ps, a, b, k);
 	if (ft_strcmp(line, "pa") == 0 && k != 1)
 		ft_printf("pa\n");
-	else if (ft_strcmp(line, "pb") == 0 && k != 1)
-		ft_printf("pb\n");
 }

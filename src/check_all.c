@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-int 	check_sort(t_ps *ps, t_num *a)
+int		check_sort(t_ps *ps, t_num *a)
 {
 	int		ind;
 
@@ -31,22 +31,20 @@ int 	check_sort(t_ps *ps, t_num *a)
 			return (0);
 		}
 		ind++;
-		a= a->next;
+		a = a->next;
 	}
-	printf("OK\n");
+	ft_printf("OK\n");
 	return (0);
 }
 
 int		check_ind_main(t_ps *ps, t_num *a, int m_ind, t_num *flag)
 {
-	long long		min;
-
-	min = a->data;
+	ps->min = a->data;
 	while (a)
 	{
-		if (min > a->data && a->ind == -1)
+		if (ps->min >= a->data && a->ind == -1)
 		{
-			min = a->data;
+			ps->min = a->data;
 			flag = a;
 		}
 		ps->max = a->data;
@@ -61,7 +59,7 @@ int		check_ind_main(t_ps *ps, t_num *a, int m_ind, t_num *flag)
 			m_ind++;
 			flag = NULL;
 			a = ps->head_a;
-			min = 2147483648;
+			ps->min = 2147483647;
 		}
 	}
 	return (0);
@@ -69,7 +67,7 @@ int		check_ind_main(t_ps *ps, t_num *a, int m_ind, t_num *flag)
 
 int		check_ind(t_ps *ps, t_num *a)
 {
-	int 			m_ind;
+	int				m_ind;
 	t_num			*flag;
 
 	a = ps->head_a;
@@ -81,5 +79,6 @@ int		check_ind(t_ps *ps, t_num *a)
 		free_t_ps(&ps, &a);
 		return (-1);
 	}
+	ps->min = 0;
 	return (0);
 }

@@ -43,10 +43,9 @@ typedef struct			s_ps
 	int 				kol;
 	int 				count_a;
 	int 				count_b;
-	int 				sum;
 }						t_ps;
 
-void	instr_execution(t_ps *ps, char *line, int k);
+void 	instr_execution(t_ps *ps, char *line, int k);
 int 	check_sort(t_ps *ps, t_num *a);
 int 	check_rep_value(t_num *a, int data, int ind);
 int 	check_start_sort(t_ps *ps, t_num *a);
