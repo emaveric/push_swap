@@ -18,7 +18,9 @@ void	some_valid(t_ps *ps)
 		ps->head_a->ind - ps->head_a->next->ind == 1)
 	{
 		if (ps->head_a->ind - ps->head_a->next->ind == 1)
+		{
 			s_exec(ps, "sa", 0);
+		}
 		else
 		{
 			ps->head_a->flag_b = -1;
