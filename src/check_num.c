@@ -84,37 +84,10 @@ int		check_num(t_ps *ps, t_num *a, char **av)
 	{
 		if ((av = check_num_main(ps, a, av, minus)) == NULL)
 		{
-			printf("Error\n");
+			write(2, "Error\n", 6);
+			free_t_ps(&ps, &a);
 			return (-1);
 		}
-		/*while (*av && **av)
-		{
-			if (**av == '-' && ft_strcmp(*av, "-2147483648") != 0)
-			{
-				*av += 1;
-				minus = 1;
-			}
-			if (**av >= '0' && **av <= '9' || ft_strcmp(*av, "-2147483648") == 0)
-			{
-				if ((av = check_atoi(ps, a, av, minus)) == NULL)
-					return (-1);
-				if (a->next)
-					a = a->next;
-				minus = 0;
-			}
-			else if (**av == ' ' && minus == 0)
-				*av += 1;
-			else
-			{
-				printf("Error\n");
-				return (-1);
-			}
-			while (*av && **av && **av == ' ')
-				*av += 1;
-		}*/
-		//av++;
 	}
-	/*a->next = NULL;
-	ps->tail_a = a;*/
 	return (0);
 }

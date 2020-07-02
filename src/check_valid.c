@@ -25,7 +25,6 @@ int 	check_start_sort(t_ps *ps, t_num *a)
 		ind++;
 		a= a->next;
 	}
-	printf("start sort");
 	return (1);
 }
 

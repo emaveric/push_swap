@@ -22,13 +22,15 @@ int		read_instr(t_ps *ps)
 	{
 		if (!(check_valid_instr(line)))
 		{
-			printf("Error\n");
 			free(line);
-			return (-1);
+			break ;
 		}
-		instr_execution(ps, line);
+		instr_execution(ps, line, 1);
 		free(line);
 	}
+	if (line)
+		free(line);
+	line = NULL;
 	return (0);
 }
 
@@ -46,41 +48,40 @@ int		is_flag(int *ac, char **av, t_ps **ps)
 int 	main(int ac, char **av)
 {
 	t_num	*a;
-	t_num	*b;
 	t_ps	*ps;
 
-	if (!(ps = init_ps()))
-		return (-1);
-	if (ac > 1)
+	if (init_new(&a, &ps) == -1)
+		return (0);
+	if (ac < 2 && *av[1] == '\0')
 	{
-		if (!(a = init_num()))
-			return (-1);
-		if (!(b = init_num()))
-			return (-1);
+		free_t_ps(&ps, &a);
+		return (0);
+	}
+	else
+	{
 		if (is_flag(&ac, av, &ps))
 			av += 1;
 		if (check_num(ps, a, av) == -1)
 			return (0);
-		check_ind(ps, a);
-		a = ps->head_a;
-		while (a != NULL)
-		{
-			printf("data %d ind %d\n", a->data, a->ind);
-			a = a->next;
-		}
+		if (check_ind(ps, a) == -1)
+			return (0);
 		read_instr(ps);
 		check_sort(ps, a);
-		/*a = ps->head_a;
+	}
+	free_t_ps(&ps, &a);
+	exit(0);
+}
+
+/*
+a = ps->head_a;
+while (a != NULL)
+{
+printf("data %d ind %d\n", a->data, a->ind);
+a = a->next;
+}
+*/
+
+/*a = ps->head_a;
 		free_t_num(a);
 		free_t_num(ps->head_b);
 		free(ps);*/
-		// почистить списки нормально !!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	}
-	a = ps->head_a;
-	while (a != NULL)
-	{
-		printf("data %d ind %d\n", a->data, a->ind);
-		a = a->next;
-	}
-	return (0);
-}

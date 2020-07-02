@@ -17,17 +17,17 @@ void	sort_b_two_el(t_ps *ps, t_num *b, int k)
 	if (ps->head_b->data > b->next->data)
 	{
 		if (k == 0)
-			s_exec(ps, ps->head_a, ps->head_b, "sb");
+			s_exec(ps, "sb", 0);
 		else
-			rr_exec(ps, ps->head_a, ps->head_b, "rr");
+			rr_exec(ps, "rr", 0);
 		ps->sum++;
 	}
 	ps->head_b->flag_b = -1;
-	p_exec(ps, ps->head_a, ps->head_b, "pa");
-	rr_exec(ps, ps->head_a, ps->head_b, "ra");
+	p_exec(ps, "pa", 0);
+	rr_exec(ps, "ra", 0);
 	ps->head_b->flag_b = -1;
-	p_exec(ps, ps->head_a, ps->head_b, "pa");
-	rr_exec(ps, ps->head_a, ps->head_b, "ra");
+	p_exec(ps, "pa", 0);
+	rr_exec(ps, "ra", 0);
 	ps->sum += 4;
 	ps->tail_b = NULL;
 	ps->count_b = 0;
@@ -37,12 +37,12 @@ void	sort_b_three_el_p2(t_ps *ps, t_num *b)
 {
 	if (b->next->data == ps->min)
 	{
-		s_exec(ps, ps->head_a, ps->head_b, "sb");
+		s_exec(ps, "sb", 0);
 		ps->head_b->flag_b = -1;
-		p_exec(ps, ps->head_a, ps->head_b, "pa");
+		p_exec(ps, "pa", 0);
 		if (ps->head_b->data < ps->head_b->next->data)
 		{
-			rr_exec(ps, ps->head_a, ps->head_b, "ra");
+			rr_exec(ps, "ra", 0);
 			ps->sum++;
 		}
 		//rr_exec(ps, ps->head_a, ps->head_b, "ra");
@@ -50,12 +50,12 @@ void	sort_b_three_el_p2(t_ps *ps, t_num *b)
 	}
 	else if (ps->tail_b->data == ps->min)
 	{
-		rrr_exec(ps, ps->tail_a, ps->tail_b, "rrb");
+		rrr_exec(ps, "rrb", 0);
 		ps->head_b->flag_b = -1;
-		p_exec(ps, ps->head_a, ps->head_b, "pa");
+		p_exec(ps, "pa", 0);
 		if (ps->head_b->data < ps->head_b->next->data)
 		{
-			rr_exec(ps, ps->head_a, ps->head_b, "ra");
+			rr_exec(ps, "ra", 0);
 			ps->sum++;
 		}
 		//rr_exec(ps, ps->head_a, ps->head_b, "ra");
@@ -68,10 +68,10 @@ void	sort_b_three_el(t_ps *ps, t_num *b)
 	if (ps->head_b->data == ps->min)
 	{
 		ps->head_b->flag_b = -1;
-		p_exec(ps, ps->head_a, ps->head_b, "pa");
+		p_exec(ps, "pa", 0);
 		if (ps->head_b->data < ps->head_b->next->data)
 		{
-			rr_exec(ps, ps->head_a, ps->head_b, "ra");
+			rr_exec(ps, "ra", 0);
 			ps->sum++;
 		}
 		// rr_exec(ps, ps->head_a, ps->head_b, "ra");
@@ -131,7 +131,7 @@ void	sort_b_main(t_ps *ps, t_num *b, int max_data)
 		{
 			b->flag_b = ps->flag;
 			max_data = b->data;
-			p_exec(ps, ps->head_a, ps->head_b, "pa");
+			p_exec(ps, "pa", 0);
 			ps->sum++;
 			//printf("QQQdata %d ind %d flag_b %d\n", ps->head_a->data, ps->head_a->ind, ps->head_a->flag_b);
 		}
@@ -139,11 +139,11 @@ void	sort_b_main(t_ps *ps, t_num *b, int max_data)
 		else if (b->ind == ps->min_ind)
 		{
 			b->flag_b = -1;
-			p_exec(ps, ps->head_a, ps->head_b, "pa");
+			p_exec(ps, "pa", 0);
 			if (ps->head_b && ps->head_b->data <= ps->mid && ps->head_b->ind != ps->min_ind + 1) // НА 1 БОЛЬШЕ??????????
-				rr_exec(ps, ps->head_a, ps->head_b, "rr");
+				rr_exec(ps, "rr", 0);
 			else
-				rr_exec(ps, ps->head_a, ps->head_b, "ra");
+				rr_exec(ps, "ra", 0);
 			//ps->min = 2147483647;
 			//min_search(ps, ps->head_b, -1);
 			//ps->min_ind++;
@@ -160,7 +160,7 @@ void	sort_b_main(t_ps *ps, t_num *b, int max_data)
 		}
 		else
 		{
-			rr_exec(ps, ps->head_a, ps->head_b, "rb");
+			rr_exec(ps, "rb", 0);
 			ps->sum++;
 		}
 		b = ps->head_b;

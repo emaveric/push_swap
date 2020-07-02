@@ -18,13 +18,16 @@ int 	check_sort(t_ps *ps, t_num *a)
 
 	ind = 0;
 	a = ps->head_a;
-	//printf("\n\nhead_b: data %d ind %d\n\n", ps->head_b->data, ps->head_b->ind);
+	if (ps->head_b != NULL || ps->head_a == NULL)
+	{
+		ft_printf("KO\n");
+		return (0);
+	}
 	while (a)
 	{
 		if (ind != a->ind)
 		{
-			printf("KO\n");
-			printf("ind %d", a->ind);
+			ft_printf("KO\n");
 			return (0);
 		}
 		ind++;
@@ -74,7 +77,8 @@ int		check_ind(t_ps *ps, t_num *a)
 	m_ind = 0;
 	if (check_ind_main(ps, a, m_ind, flag) == -1)
 	{
-		printf("Error");
+		write(2, "Error\n", 6);
+		free_t_ps(&ps, &a);
 		return (-1);
 	}
 	return (0);

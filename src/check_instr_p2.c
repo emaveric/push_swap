@@ -27,8 +27,13 @@ void 	s_exec_b(t_ps *ps, t_num *b)
 	}
 }
 
-void 	s_exec(t_ps *ps, t_num *a, t_num *b, char *line)
+void 	s_exec(t_ps *ps, char *line, int k)
 {
+	t_num	*a;
+	t_num	*b;
+
+	a = ps->head_a;
+	b = ps->head_b;
 	if (ft_strnequ(line, "sa", 3) || ft_strnequ(line, "ss", 3))
 	{
 		if (a->next)
@@ -45,6 +50,10 @@ void 	s_exec(t_ps *ps, t_num *a, t_num *b, char *line)
 	}
 	if (ft_strnequ(line, "sb", 3) || ft_strnequ(line, "ss", 3))
 		s_exec_b(ps, b);
+	if (ft_strcmp(line, "sa") == 0 && k != 1)
+		ft_printf("sa\n");
+	else if (ft_strcmp(line, "sb") == 0 && k != 1)
+		ft_printf("sb\n");
 }
 
 void	p_exec_b(t_ps *ps, t_num *a, t_num *b)
@@ -63,8 +72,13 @@ void	p_exec_b(t_ps *ps, t_num *a, t_num *b)
 	}
 }
 
-void	p_exec(t_ps *ps, t_num *a, t_num *b, char *line)
+void	p_exec(t_ps *ps, char *line, int k)
 {
+	t_num	*a;
+	t_num	*b;
+
+	a = ps->head_a;
+	b = ps->head_b;
 	if (ft_strnequ(line, "pa", 3))
 	{
 		if (b)
@@ -82,4 +96,8 @@ void	p_exec(t_ps *ps, t_num *a, t_num *b, char *line)
 	}
 	else if (ft_strnequ(line, "pb", 3))
 		p_exec_b(ps, a, b);
+	if (ft_strcmp(line, "pa") == 0 && k != 1)
+		ft_printf("pa\n");
+	else if (ft_strcmp(line, "pb") == 0 && k != 1)
+		ft_printf("pb\n");
 }

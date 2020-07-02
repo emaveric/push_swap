@@ -29,13 +29,13 @@ void	some_valid(t_ps *ps)
 		}
 		else */if (ps->head_a->ind - ps->head_a->next->ind == 1)
 		{
-			s_exec(ps, ps->head_a, ps->head_b, "sa");
+			s_exec(ps, "sa", 0);
 			ps->sum++;
 		}
 		else
 		{
 			ps->head_a->flag_b = -1;
-			rr_exec(ps, ps->head_a, ps->head_b, "ra");
+			rr_exec(ps, "ra", 0);
 			//if (ps->head_a->flag_b != ps->flag) // тест на ошибку при 500 с лишними флагами
 			//    ps->flag--;
 			ps->sum++;
@@ -63,13 +63,13 @@ void	new_part(t_ps *ps, t_num *a, int count, t_num *tmp)
 		}
 		if (a->data > ps->mid && a->flag_b != -1)
 		{
-			rr_exec(ps, ps->head_a, ps->head_b, "ra");
+			rr_exec(ps, "ra", 0);
 			ps->sum++;
 			count = 0;
 		}
 		else if (a->flag_b != -1)
 		{
-			p_exec(ps, ps->head_a, ps->head_b, "pb");
+			p_exec(ps, "pb", 0);
 			ps->sum++;
 		}
 		ps->count_a--;
@@ -92,7 +92,7 @@ void 	remaining_parts(t_ps *ps, t_num *a, t_num *tmp)
 			{
 				if (ps->max < a->data)
 					ps->max = a->data;
-				p_exec(ps, ps->head_a, ps->head_b, "pb");
+				p_exec(ps, "pb", 0);
 				ps->sum++;
 			}
 		}

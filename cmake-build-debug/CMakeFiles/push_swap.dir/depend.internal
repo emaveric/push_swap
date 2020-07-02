@@ -371,6 +371,11 @@ CMakeFiles/push_swap.dir/src/individual_cases.c.o
  /Users/emaveric/push_swap/ft_printf/libft/libft.h
  /Users/emaveric/push_swap/includes/push_swap.h
  /Users/emaveric/push_swap/src/individual_cases.c
+CMakeFiles/push_swap.dir/src/init.c.o
+ /Users/emaveric/push_swap/ft_printf/includes/ft_printf.h
+ /Users/emaveric/push_swap/ft_printf/libft/libft.h
+ /Users/emaveric/push_swap/includes/push_swap.h
+ /Users/emaveric/push_swap/src/init.c
 CMakeFiles/push_swap.dir/src/main_alg.c.o
  /Users/emaveric/push_swap/ft_printf/includes/ft_printf.h
  /Users/emaveric/push_swap/ft_printf/libft/libft.h
