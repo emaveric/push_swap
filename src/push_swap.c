@@ -49,17 +49,21 @@ void	more_than_five_alg(t_ps *ps, t_num *a, t_num *b, int k)
 	}
 }
 
-void	start_alg(int ac, t_ps *ps, t_num *a, t_num *b)
+void	start_alg(t_ps *ps, t_num *a, t_num *b)
 {
-	if (ac > 6)
+	int		kol;
+
+	kol = ps->kol;
+	ps->kol = 0;
+	if (kol > 6)//if (ac > 6)
 		more_than_five_alg(ps, a, b, 0);
-	if (ac == 6)
+	if (kol == 6)//if (ac == 6)
 		for_five_el_alg(ps, a);
-	if (ac == 5)
+	if (kol == 5)//if (ac == 5)
 		for_four_el_alg(ps, a, 0);
-	if (ac == 4)
+	if (kol == 4)//if (ac == 4)
 		for_three_el_alg(ps, a, 0);
-	if (ac == 3)
+	if (kol == 3)//if (ac == 3)
 		for_two_el_alg(ps, a);
 }
 
@@ -84,8 +88,14 @@ int		main(int ac, char **av)
 			return (0);
 		if (check_start_sort(ps, a) == 1)
 			return (0);
-		start_alg(ac, ps, a, ps->head_b);
+		start_alg(ps, a, ps->head_b);
 	}
+/*	a = ps->head_a;
+	while (a != NULL)
+	{
+		printf("data %d ind %d\n", a->data, a->ind);
+		a = a->next;
+	}*/
 	free_t_ps(&ps, &a);
 	exit(0);
 }

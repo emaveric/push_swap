@@ -12,31 +12,31 @@
 
 #include "../includes/push_swap.h"
 
-char	**check_atoi(t_ps *ps, t_num *a, char **av, int minus)
+char	**check_atoi(t_ps **ps, t_num **a, char **av, int minus)
 {
 	t_num	*tmp;
 
-	tmp = a;
-	if (ft_atoi_max_int(&a->data, *av) == -1)
+	tmp = *a;
+	if (ft_atoi_max_int(&tmp->data, *av) == -1)
 		return (NULL);
-	a->data = ft_atoi(*av);
 	if (minus == 1)
-		a->data *= -1;
-	minus = 0;
-	if (a->next == NULL && a->prev == NULL)
-		ps->head_a = a;
-	a->ind = -1;
-	if (*(av + 1))
-	{
-		if (!(a->next = init_num()))
-			return (NULL);
-		a = a->next;
-		tmp->next = a;
-		a->prev = tmp;
-		tmp = a;
-	}
+		tmp->data *= -1;
+	if (tmp->next == NULL && tmp->prev == NULL)
+		(*ps)->head_a = *a;
+	tmp->ind = -1;
 	*av += 1;
-	if (**av != ' ')
+	while (*av && **av && **av == ' ')
+		*av += 1;
+	if (*(av + 1) || (ft_strlen(*av) > 1))
+	{
+		if (!(tmp->next = init_num()))
+			return (NULL);
+		*a = tmp->next;
+		tmp->next = *a;
+		(*a)->prev = tmp;
+		tmp = *a;
+	}
+	if (**av != ' ') //if (**av == '\0' || (**av != ' ' &&	))
 		av++;
 	return (av);
 }
@@ -52,7 +52,7 @@ char	**check_num_main(t_ps *ps, t_num *a, char **av, int minus)
 		}
 		if ((**av >= '0' && **av <= '9') || ft_strcmp(*av, "-2147483648") == 0)
 		{
-			if ((av = check_atoi(ps, a, av, minus)) == NULL)
+			if ((av = check_atoi(&ps, &a, av, minus)) == NULL)
 				return (NULL);
 			if (a->next)
 				a = a->next;
@@ -62,8 +62,8 @@ char	**check_num_main(t_ps *ps, t_num *a, char **av, int minus)
 			*av += 1;
 		else
 			return (NULL);
-		while (*av && **av && **av == ' ')
-			*av += 1;
+	/*	while (*av && **av && **av == ' ')
+			*av += 1;*/
 	}
 	a->next = NULL;
 	ps->tail_a = a;
@@ -84,6 +84,10 @@ int		check_num(t_ps *ps, t_num *a, char **av)
 			free_t_ps(&ps, &a);
 			return (-1);
 		}
+		else if (*av != NULL && **av == '\0')
+			av++;
 	}
+	if (ps->head_a == NULL)
+		return (-1);
 	return (0);
 }

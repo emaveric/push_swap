@@ -54,6 +54,7 @@ int		check_ind_main(t_ps *ps, t_num *a, int m_ind, t_num *flag)
 		if (a == NULL && flag != NULL)
 		{
 			flag->ind = m_ind;
+			ps->kol++;
 			if (m_ind == 0)
 				ps->min = flag->data;
 			m_ind++;
