@@ -14,7 +14,7 @@
 
 void	s_exec_b(t_ps *ps, t_num *b)
 {
-	if (b->next)
+	if (b && b->next)
 	{
 		if (b->next->next)
 			b->next->next->prev = b;
@@ -36,7 +36,7 @@ void	s_exec(t_ps *ps, char *line, int k)
 	b = ps->head_b;
 	if (ft_strnequ(line, "sa", 3) || ft_strnequ(line, "ss", 3))
 	{
-		if (a->next)
+		if (a && a->next)
 		{
 			if (a->next->next)
 				a->next->next->prev = a;
@@ -69,6 +69,8 @@ void	p_exec_b(t_ps *ps, t_num *a, t_num *b, int k)
 			ps->tail_b = ps->head_b;
 		if (ps->head_a)
 			ps->head_a->prev = NULL;
+		else if (!ps->head_a)
+			ps->tail_a = NULL;
 	}
 	if (k != 1)
 		ft_printf("pb\n");
@@ -94,6 +96,8 @@ void	p_exec(t_ps *ps, char *line, int k)
 				ps->tail_a = ps->head_a;
 			if (ps->head_b)
 				ps->head_b->prev = NULL;
+			else if (!ps->head_b)
+				ps->tail_b = NULL;
 		}
 	}
 	else if (ft_strnequ(line, "pb", 3))

@@ -32,23 +32,24 @@ SRC = ft_atoi.c ft_bzero.c ft_div_mod.c ft_is_whitespaces.c ft_isalnum.c \
 	  ft_strcut.c ft_strjoin_free.c ft_strncut.c itoa_base.c ft_free.c \
 	  get_next_line.c ft_atoi_int_max.c
 
-OBJ = $(SRC:.c=.o)
+HEADER = libft.h
 
-HEAD = -I libft.h
+OBJ = $(SRC:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME):
-	gcc $(FLAGS) $(HEAD) -c $(SRC)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+$(NAME): $(HEADER) $(OBJ)
+				@gcc $(FLAGS) -I $(HEADER) -c $(SRC)
+				ar rc $(NAME) $(OBJ)
+				ranlib $(NAME)
 
 clean:
-	rm -rf $(OBJ)
+				rm -rf $(OBJ)
 
 fclean: clean
-	rm -rf $(NAME)
+				rm -rf $(NAME)
+				rm -rf $(OBJ)
 
 re: fclean all
