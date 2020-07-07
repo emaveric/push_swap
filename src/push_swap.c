@@ -26,7 +26,8 @@ void	scrolling(t_ps *ps, int k)
 
 void	more_than_five_alg(t_ps *ps, t_num *a, t_num *b, int k)
 {
-	some_valid(ps);
+	if (k != 0)
+		some_valid(ps);
 	from_a_to_b(ps, a, k);
 	min_search(ps, ps->head_b, -1);
 	scrolling(ps, k);
@@ -54,16 +55,16 @@ void	start_alg(t_ps *ps, t_num *a, t_num *b)
 	int		kol;
 
 	kol = ps->kol;
-	ps->kol = 0;
-	if (kol > 6)//if (ac > 6)
+	ps->kol = 1;
+	if (kol > 6)
 		more_than_five_alg(ps, a, b, 0);
-	if (kol == 6)//if (ac == 6)
+	if (kol == 6)
 		for_five_el_alg(ps, a);
-	if (kol == 5)//if (ac == 5)
+	if (kol == 5)
 		for_four_el_alg(ps, a, 0);
-	if (kol == 4)//if (ac == 4)
+	if (kol == 4)
 		for_three_el_alg(ps, a, 0);
-	if (kol == 3)//if (ac == 3)
+	if (kol == 3)
 		for_two_el_alg(ps, a);
 }
 
@@ -88,14 +89,9 @@ int		main(int ac, char **av)
 			return (0);
 		if (check_start_sort(ps, a) == 1)
 			return (0);
+		a = ps->head_a;
 		start_alg(ps, a, ps->head_b);
 	}
-/*	a = ps->head_a;
-	while (a != NULL)
-	{
-		printf("data %d ind %d\n", a->data, a->ind);
-		a = a->next;
-	}*/
 	free_t_ps(&ps, &a);
 	exit(0);
 }

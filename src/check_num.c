@@ -24,20 +24,20 @@ char	**check_atoi(t_ps **ps, t_num **a, char **av, int minus)
 	if (tmp->next == NULL && tmp->prev == NULL)
 		(*ps)->head_a = *a;
 	tmp->ind = -1;
-	*av += 1;
+	while (**av != '\0' && **av != ' ')
+		*av += 1;
 	while (*av && **av && **av == ' ')
 		*av += 1;
-	if (*(av + 1) || (ft_strlen(*av) > 1))
+	if (**av == '\0')
+		av++;
+	if (*av)
 	{
-		if (!(tmp->next = init_num()))
+		if (*av && !(tmp->next = init_num()))
 			return (NULL);
 		*a = tmp->next;
 		tmp->next = *a;
 		(*a)->prev = tmp;
-		tmp = *a;
 	}
-	if (**av != ' ') //if (**av == '\0' || (**av != ' ' &&	))
-		av++;
 	return (av);
 }
 
@@ -62,8 +62,6 @@ char	**check_num_main(t_ps *ps, t_num *a, char **av, int minus)
 			*av += 1;
 		else
 			return (NULL);
-	/*	while (*av && **av && **av == ' ')
-			*av += 1;*/
 	}
 	a->next = NULL;
 	ps->tail_a = a;

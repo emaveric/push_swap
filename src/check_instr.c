@@ -48,7 +48,7 @@ void	rr_exec(t_ps *ps, char *line, int k)
 		ft_printf("ra\n");
 	else if (ft_strcmp(line, "rb") == 0 && k != 1)
 		ft_printf("rb\n");
-	else if (ft_strcmp(line, "rr\n") == 0 && k != 1)
+	else if (ft_strcmp(line, "rr") == 0 && k != 1)
 		ft_printf("rr\n");
 }
 
@@ -102,7 +102,7 @@ void	instr_execution(t_ps *ps, char *line, int k)
 		p_exec(ps, line, k);
 	else if (ft_strnequ(line, "r", 1) && ft_strlen(line) == 2)
 		rr_exec(ps, line, k);
-	else if (ft_strnequ(line, "rr", 2) && ft_strlen(line) == 2)
+	else if (ft_strnequ(line, "rr", 2) && ft_strlen(line) == 3)
 		rrr_exec(ps, line, k);
 	if (ps->flag_v == 1)
 		output_stacks(&ps);

@@ -51,7 +51,7 @@ int		is_flag(int *ac, char **av, t_ps **ps)
 	return (0);
 }
 
-/*int		main(int ac, char **av)
+int		main(int ac, char **av)
 {
 	t_num	*a;
 	t_ps	*ps;
@@ -78,4 +78,4 @@ int		is_flag(int *ac, char **av, t_ps **ps)
 	}
 	free_t_ps(&ps, &a);
 	exit(0);
-}*/
+}

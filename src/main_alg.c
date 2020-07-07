@@ -15,9 +15,11 @@
 void	some_valid(t_ps *ps)
 {
 	while (ps->head_a->ind - ps->tail_a->ind == 1 ||
-		ps->head_a->ind - ps->head_a->next->ind == 1)
+			(ps->head_a->ind - ps->head_a->next->ind == 1
+			&& ps->head_a->next->ind - ps->tail_a->ind == 1))
 	{
-		if (ps->head_a->ind - ps->head_a->next->ind == 1)
+		if (ps->head_a->ind - ps->head_a->next->ind == 1
+			&& ps->head_a->next->ind - ps->tail_a->ind == 1)
 		{
 			s_exec(ps, "sa", 0);
 		}
